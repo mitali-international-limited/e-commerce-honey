@@ -1,18 +1,18 @@
 import React from "react";
+import styles from "./card.module.css";
 
 const Card = (props) => {
+  const { id, name, image } = props;
   return (
-    <div>
-      <div className="cursor-pointer shadow-xl">
-        <div>
-          <a href="#" className="">
-            <img src="https://www.aegisshield.com/file/7709827-product/w220/h220/j.jpg" />
-          </a>
-        </div>
-        <p className="heading-text pt-5">
-          <strong>VIP HONEY</strong>
-        </p>
+    <div
+      className={`${styles.card} bg-primary my-2 cursor-pointer transition-all shadow  hover:shadow-2xl py-10`}
+    >
+      <div className=" ">
+        <img src={image} />
       </div>
+      <p className="heading-text py-5 bg-primary text-center">
+        <strong>{name}</strong>
+      </p>
     </div>
   );
 };
