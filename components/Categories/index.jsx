@@ -4,7 +4,6 @@ import categoryData from "../../utils/category-demo-data";
 
 const Categories = () => {
   const [category, setCategory] = useState (categoryData)
-  console.log(category);
   return (
     <section className="padding_inside">
       <h2 className="text-center">Top Categories</h2>
@@ -17,12 +16,11 @@ const Categories = () => {
                 key={index}
                 name={item.name}
                 image={item.image}
-                
+                cardType="category"
               />
             )
           })
         }
-
       </div>
     </section>
   );
