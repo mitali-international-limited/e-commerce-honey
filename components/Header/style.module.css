@@ -1,5 +1,5 @@
 .header_container {
-  height: 155px;
+  height: 110px;
 }
 .logo_box {
   height: 38px;
@@ -9,18 +9,15 @@
   background-size: cover;
   cursor: pointer;
 }
-.sticky_menu_button {
+
+/* .sticky_cart_icon {
   width: 30px !important;
-  height: 25px !important;
-}
-.sticky_logo_box {
-  width: 30px !important;
-  height: 25px !important;
+  height: 30px !important;
 }
 .sticky_cart_icon {
   width: 30px !important;
   height: 30px !important;
-}
+} */
 
 .menu_button {
   height: 28px;
@@ -32,9 +29,18 @@
 }
 
 .shopping_cart {
-  height: 45px;
-  width: 45px;
-  background-image: url("../../Assets/shopping-cart.png");
+  height: 38px;
+  width: 38px;
+  background-image: url("../../Assets/shop-cart.svg");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.favourite_cart {
+  height: 28px;
+  width: 28px;
+  background-image: url("../../Assets/favourite.svg");
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -58,4 +64,26 @@
   top: 0;
   width: 100%;
   z-index: 999;
+}
+.favorite_count {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 8px;
+  right: 75px;
+  border-radius: 50%;
+  @apply bg-secondary;
+  @apply text-primary;
+  text-align: center;
+}
+.cart_count {
+  height: 20px;
+  width: 20px;
+  background-color: #b4e1d8;
+  position: absolute;
+  top: 8px;
+  right: 25px;
+  border-radius: 50%;
+  @apply text-primary;
+  text-align: center;
 }

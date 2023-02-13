@@ -52,50 +52,35 @@ const Header = () => {
   return (
     <div className={styles.header_container}>
       <div className="bg-primary h-full w-full">
-        {/*
-          <div className="bg-secondary h-1/4 padding_inside flex justify-between text-primary">
-          <div className="flex space-x-2 justify-center items-center cursor-pointer from-left">
-            <IoCall className="text-lg" />
-            <span>+990 1234 5678 90</span>
-          </div>
-          <div className="flex space-x-2 justify-center items-center cursor-pointer from-right">
-            <IoLocationOutline />
-            <span>New York</span>
-          </div>
-        </div>
-      */}
         {isSticky ? (
           <div
             id="myHeader"
             className={`${styles.sticky} padding_inside flex bg-primary justify-between items-center`}
           >
-            <div
-              className={`${styles.menu_button} my-6 ${styles.sticky_menu_button}`}
-              onClick={handleMenuOnClick}
-            >
+            <div className="flex justify-center items-center">
+              <div
+                className={`${styles.menu_button} my-6 ${styles.sticky_menu_button}`}
+                onClick={handleMenuOnClick}
+              ></div>
               <p>
                 <span>Menu</span>
               </p>
             </div>
+
             <div
               className={`${styles.logo_box} ${styles.sticky_logo_box}`}
             ></div>
 
-            <form onSubmit={handleSubmit} className="relative w-1/2">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="appearance-none rounded-full bg-white border border-secondary focus:outline-none focus:border-teal-500 text-base pl-12 py-2 pr-4 w-full"
-                value={searchTerm}
-                onChange={handleChange}
-              />
-
-              <div className={`${styles.search_icon}`}></div>
-            </form>
-
-            <div
-              className={`${styles.shopping_cart} ${styles.sticky_cart_icon}`}
-            ></div>
+            <div className="flex justify-center items-center border-2 space-x-5">
+              <div className={styles.favourite_cart}>
+                <span className={styles.favorite_count}>0</span>
+              </div>
+              <div
+                className={`${styles.shopping_cart} ${styles.sticky_cart_icon}`}
+              >
+                <span className={styles.cart_count}>0</span>
+              </div>
+            </div>
           </div>
         ) : (
           <div
@@ -113,7 +98,15 @@ const Header = () => {
                 </p>
               </div>
               <div className={styles.logo_box}></div>
-              <div className={styles.shopping_cart}></div>
+              <div className="flex justify-center border-2 items-center space-x-5">
+                <div className={styles.favourite_cart}>
+                  {" "}
+                  <span className={styles.favorite_count}>0</span>
+                </div>
+                <div className={styles.shopping_cart}>
+                  <span className={styles.cart_count}>0</span>
+                </div>
+              </div>
             </div>
             <form onSubmit={handleSubmit} className="relative">
               <input
