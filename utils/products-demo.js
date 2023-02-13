@@ -6,7 +6,7 @@ const people = [
     name: "maria ferguson",
     title: "office manager",
     quote:
-      "Fingerstache umami squid, kinfolk subway.",
+      "Fingerstache umami squid",
     quantity: "Quantity: 5",
     price: "$100",
   },
@@ -17,7 +17,7 @@ const people = [
     name: "john doe",
     title: "regular guy",
     quote:
-      "Gastropub sustainable tousled prism occupy.",
+      "Gastropub sustainable ",
     quantity: "Quantity: 5",
     price: "$100",
   },
@@ -28,7 +28,7 @@ const people = [
     name: "peter smith",
     title: "product designer",
     quote:
-      "Drinking vinegar polaroid street art echo park.",
+      "Drinking vinegar polaroid",
     quantity: "Quantity: 5",
     price: "$100",
   },
@@ -39,7 +39,7 @@ const people = [
     name: "susan andersen",
     title: "the boss",
     quote:
-      "Marfa af yr 3 wolf moon kogi, readymade distillery.",
+      "Marfa af yr 3 wolf moon kogi,",
     quantity: "Quantity: 5",
     price: "$100",
   },

@@ -22,21 +22,21 @@ const Card = (props) => {
           className={`${styles.product} bg-primary my-2 cursor-pointer transition-all shadow p-5`}
         >
           <div class="container max-auto rounded transition-all overflow-hidden shadow-lg hover:shadow-2xl">
-            <div class="h-auto max-w-auto shadow-lg">
+            <div class="h-1/2 max-w-auto shadow-lg">
               <img src={image} />
             </div>
-            <div>
+            <div className="h-1/2 pt-5">
               <p className="heading-text bg-primary text-center">
                 <strong>{name}</strong>
               </p>
               <p className="heading-text bg-primary text-center">{quote}</p>
               <p className="heading-text bg-primary text-center">{quantity}</p>
-              <p className="bg-white heading-text py-5 text-center mb-0 px-3">
+              <p className="heading-text py-5 text-center mb-0 px-3">
                 <strong>{price}</strong>
               </p>
-              <div className="flex justify-between">
-              <Button className="bg-secondary w-full mx-2">Show Details</Button>
-              <Button className="bg-secondary w-full mx-2">Cart</Button>
+              <div className="flex justify-between space-x-3">
+              <Button className="bg-secondary w-full mx-0">Details</Button>
+              <Button className="bg-secondary w-full mx-0">Cart</Button>
               </div>
             </div>
           </div>
