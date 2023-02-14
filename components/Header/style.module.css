@@ -1,5 +1,8 @@
 .header_container {
   height: 110px;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
 }
 .logo_box {
   height: 38px;
@@ -9,15 +12,6 @@
   background-size: cover;
   cursor: pointer;
 }
-
-/* .sticky_cart_icon {
-  width: 30px !important;
-  height: 30px !important;
-}
-.sticky_cart_icon {
-  width: 30px !important;
-  height: 30px !important;
-} */
 
 .menu_button {
   height: 28px;
@@ -53,17 +47,9 @@
   background-position: center;
   background-size: cover;
   cursor: pointer;
-
   position: absolute;
-  top: 6px;
-  left: 10px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
+  top: 7px;
+  left: 9px;
 }
 .favorite_count {
   height: 20px;
@@ -79,11 +65,19 @@
 .cart_count {
   height: 20px;
   width: 20px;
-  background-color: #b4e1d8;
+  @apply bg-tertiary;
   position: absolute;
   top: 8px;
   right: 25px;
   border-radius: 50%;
   @apply text-primary;
   text-align: center;
+}
+
+.search_bar {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+
+  top: 60px;
 }

@@ -4,7 +4,9 @@ import styles from "./style.module.css";
 
 const BottomMenu = () => {
   return (
-    <nav className={`${styles.bottom_container} bg-secondary padding_inside`}>
+    <nav
+      className={`${styles.bottom_container} bg-secondary padding_inside md:hidden`}
+    >
       <ul className="h-full w-full flex justify-between items-center text-primary text-lg">
         <li className="">
           <a href="/" className="">

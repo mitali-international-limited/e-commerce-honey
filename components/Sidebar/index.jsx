@@ -14,6 +14,9 @@ const Sidebar = () => {
 
   const handleMenuButton = (event) => {
     event.preventDefault();
+
+    console.log("Click happened");
+    console.log(toggle());
     dispatch(toggle());
   };
 
@@ -26,68 +29,68 @@ const Sidebar = () => {
   return (
     <div
       ref={sidebarRef}
-      className={`${
+      className={` ${
         isSidebarOpen
           ? `${styles.sidebar} ${styles.show_sidebar}`
           : `${styles.sidebar}`
       }`}
     >
-      <nav className="px-6 py-3">
-        <ul className="flex justify-between items-center">
+      <nav className="px-5 py-3">
+        <ul
+          className={`${styles.table_header} flex justify-between items-center`}
+        >
           <li>
             <a>Categories</a>
           </li>
           <li
-            className="text-primary-red cursor-pointer"
+            className="text-primary-red cursor-pointer text-lg"
             onClick={handleMenuButton}
           >
-            <a>
-              <FaTimes />
-            </a>
+            <FaTimes />
           </li>
         </ul>
       </nav>
       <hr className="text-secondary font-bold" />
-      <div className="px-6 text-xl">
-        <ul className="grid gap-4 pt-2">
-          <li className="py-2 space-x-2 flex items-center cursor-pointer">
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
+      <nav className={`${styles.table_content} text-xl`}>
+        <ul className="grid">
+          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
             <a>Honey</a>
-          </li>
-          <li className="py-2 space-x-2 flex items-center cursor-pointer">
             <span>
               <TiArrowSortedDown className="text-secondary" />
             </span>
+          </li>
+          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
             <a>Male enhancement</a>
-          </li>
-          <li className="py-2 space-x-2 flex items-center cursor-pointer">
             <span>
               <TiArrowSortedDown className="text-secondary" />
             </span>
+          </li>
+          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
             <a>Female enhancement</a>
-          </li>
-          <li className="py-2 space-x-2 flex items-center cursor-pointer">
             <span>
               <TiArrowSortedDown className="text-secondary" />
             </span>
+          </li>
+          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
             <a>Rolling Paper</a>
-          </li>
-          <li className="py-2 space-x-2 flex items-center cursor-pointer">
             <span>
               <TiArrowSortedDown className="text-secondary" />
             </span>
+          </li>
+          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
             <a>Condoms</a>
-          </li>
-          <li className="py-2 space-x-2 flex items-center cursor-pointer">
             <span>
               <TiArrowSortedDown className="text-secondary" />
             </span>
+          </li>
+          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
             <a>Pills</a>
+            <span>
+              <TiArrowSortedDown className="text-secondary" />
+            </span>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   );
 };
