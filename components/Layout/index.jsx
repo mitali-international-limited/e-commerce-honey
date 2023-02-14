@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Header />
-      <Sidebar />
+
       {children}
       <BottomMenu />
       <Footer />
