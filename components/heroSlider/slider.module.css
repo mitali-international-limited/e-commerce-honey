@@ -1,6 +1,7 @@
 .section_slider {
   width: 100vw;
-  margin: 0 auto;
+  position: relative;
+  margin-top: 8rem;
 }
 .section_center {
   margin: 0 auto;

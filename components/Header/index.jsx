@@ -13,6 +13,8 @@ import menuButton from "../../Assets/icons8-menu-48 (2).png";
 import styles from "./style.module.css";
 import Sidebar from "../Sidebar";
 
+import logo from "../../Assets/svg.svg";
+
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSticky, setSticky] = useState(false);
@@ -51,10 +53,10 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.header_container}>
+    <div className={`${styles.header_container}`}>
       <div className="bg-primary h-full w-full">
         <div id="myHeader" className="grid gap-1 padding_inside items-center ">
-          <div className="flex justify-between items-center p-3 relative overflow-hidden">
+          <div className="flex justify-between items-center p-3">
             <div className="flex justify-center items-center md:hidden">
               <div
                 className={`${styles.menu_button}`}
@@ -74,17 +76,22 @@ const Header = () => {
               </div>
             </div>
           </div>
+          <form
+            onSubmit={handleSubmit}
+            className={`${styles.search_bar} ${styles.item_form}`}
+          >
+            <div className={styles.search_icon}></div>
+            <div className="grow">
+              <input
+                type="text"
+                placeholder={`What are you looking for today ...`}
+                className="appearance-none ml-3 bg-white  text-base pl-10 py-4 pr-12 w-full focus:outline-none"
+                value={searchTerm}
+                onChange={handleChange}
+              />
+            </div>
+          </form>
         </div>
-        <form onSubmit={handleSubmit} className={styles.search_bar}>
-          <input
-            type="text"
-            placeholder="What are you looking for today ..."
-            className="appearance-none bg-white border border-secondary focus:outline-none focus:border-teal-500 text-base pl-10 py-2 pr-4 w-full"
-            value={searchTerm}
-            onChange={handleChange}
-          />
-          <div className={styles.search_icon}></div>
-        </form>
       </div>
       <Sidebar />
     </div>

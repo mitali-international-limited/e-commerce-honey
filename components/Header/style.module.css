@@ -3,11 +3,14 @@
   width: 100vw;
   position: fixed;
   z-index: 100;
+  top: 0;
+  left: 0;
 }
 .logo_box {
-  height: 38px;
-  width: 45px;
-  background-image: url("../../Assets/WhatsApp\ Image\ 2023-02-03\ at\ 12.26.27\ PM.jpeg");
+  height: 3rem;
+  width: 5.8rem;
+  @apply bg-primary;
+  background-image: url("../../Assets/logoH.jpeg");
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -47,9 +50,6 @@
   background-position: center;
   background-size: cover;
   cursor: pointer;
-  position: absolute;
-  top: 7px;
-  left: 9px;
 }
 .favorite_count {
   height: 20px;
@@ -75,9 +75,15 @@
 }
 
 .search_bar {
-  position: absolute;
-  overflow: hidden;
+  position: relative;
   width: 100%;
-
-  top: 60px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  @apply bg-white;
+  padding: 0 0.75rem;
+}
+.item_form:focus-within {
+  border: 1px solid;
+  @apply border-secondary;
 }
