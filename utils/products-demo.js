@@ -1,48 +1,40 @@
 const people = [
   {
     id: 1,
-    image:
-    "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
+    image: "/Products/Black Bull/Black Bull(1).jpeg",
 
-    name: "maria ferguson",
-    title: "office manager",
-    quote:
-      "Fingerstache umami squid",
-    quantity: "Quantity: 5",
+    name: "Black Bull",
+    category: "Male enhancement Supplement",
+    quote: "Don't Quit ... ",
+    quantity: "10 pcs",
     price: "$100",
   },
   {
     id: 2,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-    name: "john doe",
-    title: "regular guy",
-    quote:
-      "Gastropub sustainable ",
-    quantity: "Quantity: 5",
-    price: "$100",
+    image: "/Products/Blue Bull/Blue Bull.jpeg",
+    name: "Blue Bull",
+    category: "Male enhancement Supplement",
+    quote: "Extra strength",
+    quantity: "15 pouches",
+    price: "$150",
   },
   {
     id: 3,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
-    name: "peter smith",
-    title: "product designer",
-    quote:
-      "Drinking vinegar polaroid",
+    image: "/Products/Gold Honey/Gold Honey(4).jpeg",
+    name: "Etumax Honey",
+    category: "VIP Royal Honey",
+    quote: "Honey for Extra Energy",
     quantity: "Quantity: 5",
     price: "$100",
   },
   {
     id: 4,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "susan andersen",
-    title: "the boss",
-    quote:
-      "Marfa af yr 3 wolf moon kogi,",
-    quantity: "Quantity: 5",
-    price: "$100",
+    image: "/Products/Leoard Honey/Leopard Honey.jpg",
+    name: "Leopard Honey",
+    category: "Dietary Supplement",
+    quote: "Discover the potential",
+    quantity: "10 pcs",
+    price: "$120",
   },
 ];
 

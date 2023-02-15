@@ -1,9 +1,15 @@
 import React from "react";
 import styles from "./card.module.css";
 import Button from "../Button";
+import Image from "next/image";
 
+// import getConfig from "next/config";
+
+// const { publicRuntimeConfig } = getConfig();
+// const imagesPath = publicRuntimeConfig.IMAGES_PATH;
 const Card = (props) => {
   const { id, name, image, cardType, quote, quantity, price } = props;
+
   return (
     <>
       {cardType === "category" ? (
@@ -11,7 +17,7 @@ const Card = (props) => {
           className={`${styles.card} bg-primary my-2 cursor-pointer transition-all shadow  hover:shadow-2xl py-10`}
         >
           <div className=" ">
-            <img src={image} />
+            <Image src={image} width="150" height="150" />
           </div>
           <p className="heading-text py-5 bg-primary text-center">
             <strong>{name}</strong>
@@ -35,8 +41,8 @@ const Card = (props) => {
                 <strong>{price}</strong>
               </p>
               <div className="flex justify-between space-x-3">
-              <Button className="bg-secondary w-full mx-0">Details</Button>
-              <Button className="bg-secondary w-full mx-0">Cart</Button>
+                <Button className="bg-secondary w-full mx-0">Details</Button>
+                <Button className="bg-secondary w-full mx-0">Cart</Button>
               </div>
             </div>
           </div>

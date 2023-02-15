@@ -1,29 +1,24 @@
 const categories = [
-    {
-      id: 1,
-      image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-      name: "maria ferguson",
-    },
-    {
-      id: 2,
-      image:
-        "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-      name: "john doe",
-    },
-    {
-      id: 3,
-      image:
-        "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
-      name: "peter smith",
-    },
-    {
-      id: 4,
-      image:
-        "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-      name: "susan andersen",
-    },
-  ];
-  
-  export default categories;
-  
+  {
+    id: 1,
+    image: "/Category/male-enhancement.jpg",
+    name: "Male Enhancement",
+  },
+  {
+    id: 2,
+    image: "/Category/female-enhancement.jpg",
+    name: "Female Enhancement",
+  },
+  {
+    id: 3,
+    image: "/Category/Gold Honey(7).jpeg",
+    name: "VIP Honey",
+  },
+  {
+    id: 4,
+    image: "/Category/Spanish-fly-22000-Rear-Side Red.jpg",
+    name: "Pills",
+  },
+];
+
+export default categories;
