@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
 
-import data from "../../utils/data-demo";
+import data from "../../utils/products-demo";
 import Button from "../Button";
 
 import styles from "./slider.module.css";
 
-const Slider = () => {
+const productSlider = () => {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
 
@@ -34,7 +34,9 @@ const Slider = () => {
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;
 
-          {/* //more stuff comming up */}
+          {
+            /* //more stuff comming up */
+          }
           let position = "nextSlide";
           if (personIndex === index) {
             position = "activeSlide";
@@ -48,13 +50,20 @@ const Slider = () => {
           return (
             <article className={styles[position]} key={id}>
               <img src={image} alt={name} className={styles.person_img} />
-              <div className={styles.slider_content}>
-                <div>
-                  <h4>{name}</h4>
-                  <p className={styles.title}>{title}</p>
-                  <p className={styles.text}>{quote}</p>
-                  <Button className="bg-tertiary">Shop Now</Button>
-                </div>
+              <div className="grid grid-cols-3 m-5 items-center gap-1 justify-between md:grid-cols-4">
+                {product.map((item, index) => {
+                  return (
+                    <Card
+                      key={index}
+                      name={item.name}
+                      image={item.image}
+                      quote={item.quote}
+                      quantity={item.quantity}
+                      price={item.price}
+                      categoryType={`products`}
+                    />
+                  );
+                })}
               </div>
             </article>
           );
@@ -70,17 +79,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
-
-// This section is for, when i use backend fatch api
-
-// export async function getStaticProps() {
-//   const res = await fetch("../../utils/data-demo.json");
-//   const data = await res.json();
-
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+export default productSlider;
