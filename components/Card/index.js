@@ -19,13 +19,13 @@ const Card = (props) => {
         </div>
       ) : (
         <div
-          className={`${styles.product} bg-primary my-2 cursor-pointer transition-all shadow p-5`}
+          className={`${styles.product} h-300 w-200 bg-primary my-2 cursor-pointer transition-all shadow p-5`}
         >
-          <div class="container max-auto rounded transition-all overflow-hidden shadow-lg hover:shadow-2xl">
-            <div class="h-1/2 max-w-auto shadow-lg">
+          <div className=" h-300 w-200 container max-auto rounded transition-all overflow-hidden shadow-lg hover:shadow-2xl">
+            <div className=" w-full shadow-lg">
               <img src={image} />
             </div>
-            <div className="h-1/2 pt-5">
+            <div className=" pt-5">
               <p className="heading-text bg-primary text-center">
                 <strong>{name}</strong>
               </p>
