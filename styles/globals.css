@@ -93,6 +93,9 @@ body {
 .from-right {
   animation: moveInRight 2s ease-in-out;
 }
+.from-bottom {
+  animation: moveInBottom 2s ease-out;
+}
 
 h2 {
   letter-spacing: 3px;
