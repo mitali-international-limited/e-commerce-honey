@@ -15,6 +15,7 @@ const Products = () => {
               key={index}
               name={item.name}
               image={item.image}
+              category={item.category}
               quote={item.quote}
               quantity={item.quantity}
               price={item.price}

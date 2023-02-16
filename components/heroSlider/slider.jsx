@@ -5,6 +5,8 @@ import { FaQuoteRight } from "react-icons/fa";
 import data from "../../utils/data-demo";
 import Button from "../Button";
 
+import Image from "next/image";
+
 import styles from "./slider.module.css";
 
 const Slider = () => {
@@ -46,8 +48,13 @@ const Slider = () => {
             position = "lastSlide";
           }
           return (
-            <article className={styles[position]} key={id}>
-              <img src={image} alt={name} className={styles.person_img} />
+            <article className={`${styles[position]}`} key={id}>
+              <Image
+                src={image}
+                alt={name}
+                fill
+                className={styles.person_img}
+              />
               <div className={styles.slider_content}>
                 <div>
                   <h4>{name}</h4>

@@ -7,13 +7,21 @@
   left: 0;
 }
 .logo_box {
-  height: 3rem;
-  width: 5.8rem;
+  height: 3.5rem;
+  width: 7.5rem;
+  /* flex-basis: 50%; */
   @apply bg-primary;
-  background-image: url("../../Assets/logoH.jpeg");
+  background-image: url("../../Assets/logoH.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
+}
+
+@media screen and (min-width: 778px) {
+  .logo_box {
+    height: 6rem;
+    width: 13rem;
+  }
 }
 
 .menu_button {
@@ -52,26 +60,42 @@
   cursor: pointer;
 }
 .favorite_count {
-  height: 20px;
-  width: 20px;
+  height: 1.5rem;
+  width: 1.5rem;
   position: absolute;
-  top: 8px;
-  right: 75px;
+  top: 0.5rem;
+  right: 6rem;
   border-radius: 50%;
   @apply bg-secondary;
   @apply text-primary;
   text-align: center;
 }
+
+@media screen and (min-width: 778px) {
+  .favorite_count {
+    font-size: 12px;
+    top: 1.8rem;
+    right: 6rem;
+  }
+}
+
 .cart_count {
-  height: 20px;
-  width: 20px;
+  height: 1.5rem;
+  width: 1.5rem;
   @apply bg-tertiary;
   position: absolute;
-  top: 8px;
-  right: 25px;
+  top: 0.5rem;
+  right: 2rem;
   border-radius: 50%;
   @apply text-primary;
   text-align: center;
+}
+@media screen and (min-width: 778px) {
+  .cart_count {
+    font-size: 12px;
+    top: 1.8rem;
+    right: 2rem;
+  }
 }
 
 .search_bar {
@@ -83,6 +107,13 @@
   @apply bg-white;
   padding: 0 0.75rem;
 }
+
+@media screen and (min-width: 778px) {
+  .search_bar {
+    max-width: 40%;
+  }
+}
+
 .item_form:focus-within {
   border: 1px solid;
   @apply border-secondary;

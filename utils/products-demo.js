@@ -1,82 +1,41 @@
-
-
 const people = [
   {
     id: 1,
-    image: 
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "maria",
-    title: "office manager",
-    quote:
-      "Fingerstache umami squid",
-    quantity: "Quantity: 5",
+    image: "/Products/Black Bull/Black Bull(1).jpeg",
+
+    name: "Black Bull",
+    category: "Male enhancement Supplement",
+    quote: "Don't Quit ... ",
+    quantity: "10 pcs",
     price: "$100",
   },
   {
     id: 2,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883417/person-3_ipa0mj.jpg",
-    name: "john",
-    title: "regular guy",
-    quote:
-      "Gastropub sustainable squid",
-    quantity: "Quantity: 5",
-    price: "$100",
+    image: "/Products/Blue Bull/Blue Bull.jpeg",
+    name: "Blue Bull",
+    category: "Male enhancement Supplement",
+    quote: "Extra strength",
+    quantity: "15 pouches",
+    price: "$150",
   },
   {
     id: 3,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1595959121/person-1_aufeoq.jpg",
-    name: "smith",
-    title: "product designer",
-    quote:
-      "Drinking vinegar polaroid",
-    quantity: "Quantity: 5",
+    image: "/Products/Gold Honey/Gold Honey(4).jpeg",
+    name: "Etumax Honey",
+    category: "VIP Royal Honey",
+    quote: "Honey for Extra Energy",
+    quantity: "10pcs",
     price: "$100",
   },
   {
     id: 4,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "susan",
-    title: "the boss",
-    quote:
-      "MFingerstache umami squid",
-    quantity: "Quantity: 5",
-    price: "$100",
-  },
-  {
-    id: 5,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "andersen",
-    title: "the boss",
-    quote:
-      "Fingerstache umami squid",
-    quantity: "Quantity: 5",
-    price: "$100",
-  },
-  {
-    id: 6,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "susan",
-    title: "the boss",
-    quote:
-      "Fingerstache umami squid",
-    quantity: "Quantity: 5",
-    price: "$100",
-  },
-  {
-    id: 7,
-    image:
-      "https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
-    name: "susan",
-    title: "the boss",
-    quote:
-      "Fingerstache umami squid",
-    quantity: "Quantity: 5",
-    price: "$100",
+    id: 4,
+    image: "/Products/Leoard Honey/Leopard Honey.jpg",
+    name: "Leopard Honey",
+    category: "Dietary Supplement",
+    quote: "Discover the potential",
+    quantity: "10 pcs",
+    price: "$120",
   },
 ];
 
