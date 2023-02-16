@@ -3,7 +3,7 @@ import { IoCall, IoMailSharp } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary padding_inside mb-20">
+    <footer className="bg-secondary padding_inside mb-20 md:mb-0">
       <div className="p-5 text-primary">
         <h3 className="text-center from-left">About Us</h3>
         <hr />

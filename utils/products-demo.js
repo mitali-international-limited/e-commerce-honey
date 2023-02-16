@@ -24,10 +24,11 @@ const people = [
     name: "Etumax Honey",
     category: "VIP Royal Honey",
     quote: "Honey for Extra Energy",
-    quantity: "Quantity: 5",
+    quantity: "10pcs",
     price: "$100",
   },
   {
+    id: 4,
     id: 4,
     image: "/Products/Leoard Honey/Leopard Honey.jpg",
     name: "Leopard Honey",
