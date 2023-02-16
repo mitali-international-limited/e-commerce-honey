@@ -7,7 +7,7 @@ const Categories = () => {
   return (
     <section className="padding_inside">
       <h2 className="mb-0 ">Top Categories</h2>
-      <hr className="mx-0"/>
+      <hr className="h-px my-8 bg-secondary border-0 dark:bg-secondary" />
       <div className="grid grid-cols-2 items-center gap-3 justify-between md:grid-cols-4">
         {
           category.map((item, index) => {
