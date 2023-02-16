@@ -3,6 +3,8 @@ import styles from "./card.module.css";
 import Button from "../Button";
 import Image from "next/image";
 
+import ReviewStar from "../Star";
+
 // import getConfig from "next/config";
 
 // const { publicRuntimeConfig } = getConfig();
@@ -14,94 +16,47 @@ const Card = (props) => {
     <>
       {cardType === "category" ? (
         <div
-          className={`${styles.card} bg-primary my-2 cursor-pointer transition-all shadow  hover:shadow-2xl py-10`}
+          className={`${styles.card} my-2 cursor-pointer transition-all shadow  hover:shadow-2xl py-10`}
         >
-          <div className=" ">
-            <Image src={image} width="150" height="150" />
-          </div>
-          <p className="heading-text py-5 bg-primary text-center">
-            <strong>{name}</strong>
-          </p>
+          <a className="block">
+            <div className="relative w-full" style={{ paddingTop: "75%" }}>
+              <Image src={image} alt={name} fill objectFit="cover" />
+            </div>
+            <div className="pt-5 text-center">
+              <p className="text-lg font-semibold">{name}</p>
+            </div>
+          </a>
         </div>
       ) : (
         <div className="h-300 w-200">
-          <div className=" h-300 w-200 max-auto rounded transition-all cursor-pointer">
-            <div className=" w-full">
-              <img src={image} />
+          <div className="block h-300 w-200 p-5 rounded transition-all cursor-pointer">
+            <div className="relative w-full" style={{ paddingTop: "75%" }}>
+              <Image src={image} alt={name} fill objectFit="cover" />
             </div>
             <div className=" pt-5">
-              <div className="pb-2 flex justify-between">
-                <p className="ml-2 heading-text">
+              <div className="pb-2">
+                <p className="text-lg text-secondary text-center">
                   <strong>{name}</strong>
                 </p>
 
                 {/* ratting section  */}
-
-                <div class="m-1 flex items-center">
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-yellow-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>First star</title>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-yellow-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Second star</title>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-yellow-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Third star</title>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-yellow-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Fourth star</title>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                  <svg
-                    aria-hidden="true"
-                    class="w-5 h-5 text-gray-300 dark:text-gray-500"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>Fifth star</title>
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                  </svg>
-                </div>
               </div>
-
-              <p className="m-3 text-md text-center">{quote}</p>
-              <p className="m-3 heading-text text-center">{quantity}</p>
-              <p className="heading-text py-5 text-center mb-0 px-3">
-                <strong className="bg-primary inline-block px-3 py-1 text-md font-semibold text-gray-700 mr-2 mb-2">
+              <p className="flex justify-around items-center px-3 pb-2">
+                <strong className="bg-primary inline-block font-semibold line-through">
+                  $330
+                </strong>
+                <strong className="bg-primary inline-block font-semibold">
                   {price}
                 </strong>
               </p>
-              {/* <div className="flex justify-between space-x-3">
-                <Button className="bg-secondary w-full mx-0">Details</Button>
-                <Button className="bg-secondary w-full mx-0">Cart</Button>
-              </div> */}
+              <p className="text-sm md:text-lg">{quote}</p>
+              <p className="text-center">{quantity}</p>
+              <div className="flex justify-center">
+                <ReviewStar />
+              </div>
+              <div className="text-center pt-5 underline text-tertiary">
+                View
+              </div>
             </div>
           </div>
         </div>

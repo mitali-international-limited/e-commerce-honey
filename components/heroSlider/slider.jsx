@@ -36,7 +36,9 @@ const Slider = () => {
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;
 
-          {/* //more stuff comming up */}
+          {
+            /* //more stuff comming up */
+          }
           let position = "nextSlide";
           if (personIndex === index) {
             position = "activeSlide";
@@ -53,9 +55,10 @@ const Slider = () => {
                 src={image}
                 alt={name}
                 fill
+                responsive
                 className={styles.person_img}
               />
-              <div className={styles.slider_content}>
+              <div className={`${styles.slider_content} from-bottom`}>
                 <div>
                   <h4>{name}</h4>
                   <p className={styles.title}>{title}</p>
