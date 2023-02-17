@@ -119,6 +119,52 @@ const Header = () => {
               </div>
             </form>
           </div>
+
+
+          <div className="hidden md:block md:order-3 h-7 ml-20 pl-20 flex-1 text-lg">
+              <nav>
+                <ul className="flex justify-around pb-5 items-center">
+                  <li>
+                    <a href="/" className="">
+                      <span>Category</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="">
+                      <span>Honey</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="">
+                      <span>Male Enhancement</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="">
+                      <span>Female Enhancement</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="">
+                      <span>Rolling Paper</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="">
+                      <span>Condoms</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/" className="">
+                      <span>Pills</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+
+
         </div>
       </div>
       <Sidebar />

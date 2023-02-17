@@ -5,15 +5,19 @@ const gallery = (props) => {
   const { id, name, image, cardType, quote } = props;
   return cardType === "category" ? (
     <div
-      className={`${styles.gallery} cursor-pointer items-center justify-center transition-all`}
+      className={`${styles.gallery} bg-primary my-2 cursor-pointer transition-all`}
     >
-      <div className=" ">
-        <img src={image} />
-      </div>
-      <p className="heading-text bg-primary py-5 text-center text-md">{quote}</p>
-      <p className="heading-text bg-primary py-3 text-center text-lg">
-        <strong>{name}</strong>
-      </p>
+      <a className="block">
+        <div className="relative w-full " style={{ paddingTop: "" }}>
+          <img src={image} alt={name} fill objectFit="cover" />
+        </div>
+        <div className="pt-5 text-center">
+          <p className="heading-text text-lg p-5">{quote}</p>
+          <p className="heading-text text-md p-5">
+            <strong>{name}</strong>
+          </p>
+        </div>
+      </a>
     </div>
   ) : (
     []
