@@ -2,11 +2,12 @@
   "name": "chicky-honey-official",
   "version": "0.1.0",
   "private": true,
- "scripts": {
-  "dev": "node server.js",
-  "build": "next build",
-  "start": "NODE_ENV=production node server.js"
-},
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start"
+  },
   "dependencies": {
     "@next/font": "13.1.6",
     "@reduxjs/toolkit": "^1.9.2",
