@@ -5,6 +5,7 @@ import { HYDRATE } from "next-redux-wrapper";
 const initialState = {
   isSidebarOpen: false,
   isSticky: false,
+  isModalOpen: false,
 };
 
 export const sidebarSlice = createSlice({
@@ -17,8 +18,11 @@ export const sidebarSlice = createSlice({
     stickyPosition: (state) => {
       state.isSticky = !state.isSticky;
     },
+    favToggle: (state) => {
+      state.isModalOpen = !state.isModalOpen;
+    },
   },
 });
-export const { toggle, stickyPosition } = sidebarSlice.actions;
+export const { toggle, stickyPosition, favToggle } = sidebarSlice.actions;
 
 export default sidebarSlice.reducer;

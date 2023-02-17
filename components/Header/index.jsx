@@ -2,41 +2,34 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggle } from "../../Store/slices/globalSlice";
-
-import { IoCall, IoLocationOutline } from "react-icons/io5";
-import { TfiMenu } from "react-icons/tfi";
-
-import shoppingCart from "../../Assets/shopping-cart.png";
-import menuButton from "../../Assets/icons8-menu-48 (2).png";
+import { toggle, favToggle } from "../../Store/slices/globalSlice";
 
 import styles from "./style.module.css";
-import btmenuStyle from "../Bottom-menu/style.module.css";
 
 import Sidebar from "../Sidebar";
-
-import logo from "../../Assets/svg.svg";
+import Navigation from "../Navigation";
+import Favorite from "../favorite";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [isSticky, setSticky] = useState(false);
 
   // sticky Header
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.pageYOffset > 0) {
+  //       setSticky(true);
+  //     } else {
+  //       setSticky(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const dispatch = useDispatch();
 
@@ -52,6 +45,12 @@ const Header = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Do something with the search term (e.g., perform a search)
+  };
+
+  const openFavoriteModal = (event) => {
+    event.preventDefault();
+    console.log("fav click");
+    dispatch(favToggle());
   };
 
   return (
@@ -70,7 +69,10 @@ const Header = () => {
             </div>
             <div className={`${styles.logo_box} md:order-1`}></div>
             <div className="basis-16 flex justify-center items-center space-x-5 md:order-4">
-              <div className={styles.favourite_cart}>
+              <div
+                className={styles.favourite_cart}
+                onClick={openFavoriteModal}
+              >
                 <span className={styles.favorite_count}>0</span>
               </div>
               <div className={styles.shopping_cart}>
@@ -119,55 +121,17 @@ const Header = () => {
               </div>
             </form>
           </div>
-
-
-          <div className="hidden md:block md:order-3 h-7 ml-20 pl-20 flex-1 text-lg">
-              <nav>
-                <ul className="flex justify-around pb-5 items-center">
-                  <li>
-                    <a href="/" className="">
-                      <span>Category</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/" className="">
-                      <span>Honey</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/" className="">
-                      <span>Male Enhancement</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/" className="">
-                      <span>Female Enhancement</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/" className="">
-                      <span>Rolling Paper</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/" className="">
-                      <span>Condoms</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/" className="">
-                      <span>Pills</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-
-
-
+        </div>
+        <div className="hidden md:block">
+          <hr className="h-px bg-secondary border-0 dark:bg-secondary" />
+          <div className=" my-auto w-full text-lg bg-white">
+            <Navigation />
+          </div>
+          <hr className="h-px bg-secondary border-0 dark:bg-secondary" />
         </div>
       </div>
       <Sidebar />
+      <Favorite />
     </div>
   );
 };

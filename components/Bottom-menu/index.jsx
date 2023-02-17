@@ -7,7 +7,7 @@ const BottomMenu = () => {
     <nav
       className={`${styles.bottom_container} bg-secondary padding_inside md:hidden`}
     >
-      <ul className="h-full w-full flex justify-between items-center text-primary text-lg">
+      <ul className="h-full w-full flex justify-between items-center text-primary text-bold text-lg">
         <li className="">
           <a href="/" className="">
             <span className={`${styles.bottom_home}`}></span>

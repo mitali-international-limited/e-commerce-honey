@@ -14,9 +14,6 @@ const Sidebar = () => {
 
   const handleMenuButton = (event) => {
     event.preventDefault();
-
-    console.log("Click happened");
-    console.log(toggle());
     dispatch(toggle());
   };
 
