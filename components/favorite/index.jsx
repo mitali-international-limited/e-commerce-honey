@@ -11,7 +11,7 @@ const Favorite = () => {
     <>
       {isModalOpen && (
         <div
-          className={`${styles.fav__container} bg-white border rounded-sm  border-secondary`}
+          className={`${styles.fav__container} bg-white rounded-lg shadow-2x`}
         >
           <h5 className="text-center font-semibold p-3">Favorite Items</h5>
           <hr className="h-px my-2 bg-secondary border-0 dark:bg-secondary" />
