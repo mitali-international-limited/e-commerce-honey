@@ -1,0 +1,8 @@
+.fav__container {
+  min-height: 150px;
+  height: auto;
+  width: 220px;
+  position: absolute;
+  right: 25px;
+  top: 60px;
+}

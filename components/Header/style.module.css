@@ -1,0 +1,120 @@
+.header_container {
+  height: 135px;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+.logo_box {
+  height: 3.5rem;
+  width: 7.5rem;
+  /* flex-basis: 50%; */
+  @apply bg-primary;
+  background-image: url("../../Assets/logoH.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 778px) {
+  .logo_box {
+    height: 6rem;
+    width: 13rem;
+  }
+}
+
+.menu_button {
+  height: 28px;
+  width: 28px;
+  background-image: url("../../Assets/icons8-menu-48\ \(2\).png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.shopping_cart {
+  height: 38px;
+  width: 38px;
+  background-image: url("../../Assets/shop-cart.svg");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.favourite_cart {
+  height: 28px;
+  width: 28px;
+  background-image: url("../../Assets/favourite.svg");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.search_icon {
+  height: 20px;
+  width: 20px;
+  background-image: url("../../Assets/icons8-search-50.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.favorite_count {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 6rem;
+  border-radius: 50%;
+  @apply bg-secondary;
+  @apply text-primary;
+  text-align: center;
+}
+
+@media screen and (min-width: 778px) {
+  .favorite_count {
+    font-size: 12px;
+    top: 1.8rem;
+    right: 6rem;
+  }
+}
+
+.cart_count {
+  height: 1.5rem;
+  width: 1.5rem;
+  @apply bg-tertiary;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  border-radius: 50%;
+  @apply text-primary;
+  text-align: center;
+}
+@media screen and (min-width: 778px) {
+  .cart_count {
+    font-size: 12px;
+    top: 1.8rem;
+    right: 2rem;
+  }
+}
+
+.search_bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  @apply bg-white;
+  padding: 0 0.75rem;
+}
+
+@media screen and (min-width: 778px) {
+  .search_bar {
+    max-width: 40%;
+  }
+}
+
+.item_form:focus-within {
+  border: 1px solid;
+  @apply border-secondary;
+}
