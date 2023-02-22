@@ -41,7 +41,7 @@ const Card = (props) => {
 
                 {/* ratting section  */}
               </div>
-              <p className="flex justify-around items-center px-3 pb-2">
+              <p className="flex flex-col justify-around items-center px-3 pb-2">
                 <strong className="bg-primary inline-block font-semibold line-through">
                   $330
                 </strong>
@@ -49,7 +49,7 @@ const Card = (props) => {
                   {price}
                 </strong>
               </p>
-              <p className="text-sm md:text-lg">{quote}</p>
+              <p className="text-sm text-center md:text-lg">{quote}</p>
               <p className="text-center">{quantity}</p>
               <div className="flex justify-center">
                 <ReviewStar />
