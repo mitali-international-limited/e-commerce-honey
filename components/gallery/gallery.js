@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./gallery.module.css";
 
-const gallery = (props) => {
+const Gallery = (props) => {
   const { id, name, image, cardType, quote } = props;
   return cardType === "category" ? (
     <div className={`bg-primary my-2 cursor-pointer transition-all`}>
@@ -22,4 +22,4 @@ const gallery = (props) => {
   );
 };
 
-export default gallery;
+export default Gallery;
