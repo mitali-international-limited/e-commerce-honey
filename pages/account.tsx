@@ -10,7 +10,7 @@ import { MdLockOutline } from "react-icons/md";
 const Account = () => {
   return (
     <div className=" flex flex-col items-center justify-center min-h-screen py-2 bg-primary mt-24">
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className="flex flex-col items-center justify-center w-full flex-1 px-15 text-center">
         <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
           {/* Sign in section */}
           <div className="w-3/5 p-5">
@@ -68,17 +68,25 @@ const Account = () => {
                     <input type="checkbox" name="remember" className="mr-1" />{" "}
                     Remember me
                   </label>
-                  <a href="#" className="text-xs">
+                  <a href="#" className="text-xs mt-1">
                     Forgot Password
                   </a>
                 </div>
 
+                <div className="flex justify-between">
                 <a
-              href="#"
-              className="border-2 border-secondary rounded-full px-12 py-2 inline-block font-semibold hover:bg-secondary hover:text-white"
-            >
-              Sign In
-            </a>
+                  href="#"
+                  className="border-2 border-secondary rounded-full px-12 py-2 inline-block font-semibold hover:bg-secondary hover:text-white"
+                >
+                  Sign In
+                </a>
+                {/* <a
+                  href="#"
+                  className=" ml-2 border-2 border-secondary rounded-full px-12 py-2 inline-block font-semibold hover:bg-secondary hover:text-white"
+                >
+                  Sign Up
+                </a> */}
+                  </div>
               </div>
             </div>
           </div>
