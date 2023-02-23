@@ -6,7 +6,7 @@ const Gallery = (props) => {
   return cardType === "category" ? (
     <div className={`bg-primary my-2 cursor-pointer transition-all`}>
       <div>
-        <div className="relative w-full " style={{ paddingTop: "" }}>
+        <div className="relative w-full ">
           <img src={image} alt={name} fill objectFit="cover" />
         </div>
         <div className=" text-center">

@@ -4,13 +4,15 @@ import Button from "../Button";
 import Image from "next/image";
 
 import ReviewStar from "../Star";
+import OfferPercent from "../offer";
 
 // import getConfig from "next/config";
 
 // const { publicRuntimeConfig } = getConfig();
 // const imagesPath = publicRuntimeConfig.IMAGES_PATH;
 const Card = (props) => {
-  const { id, name, image, cardType, quote, quantity, price } = props;
+  const { id, name, image, cardType, quote, quantity, price, percentage } =
+    props;
 
   return (
     <>
@@ -29,10 +31,16 @@ const Card = (props) => {
         </div>
       ) : (
         <div className="h-300 w-200">
-          <div className="block h-300 w-200 p-5 rounded transition-all cursor-pointer">
+          <div className="relative h-300 w-200 p-5 rounded transition-all cursor-pointer">
             <div className="relative w-full" style={{ paddingTop: "75%" }}>
               <Image src={image} alt={name} fill objectFit="cover" />
             </div>
+            {percentage && (
+              <div className={`${styles.percentage}`}>
+                <OfferPercent percentage={percentage} />
+              </div>
+            )}
+
             <div className=" pt-5">
               <div className="pb-2">
                 <p className="text-lg text-secondary text-center">
@@ -41,7 +49,7 @@ const Card = (props) => {
 
                 {/* ratting section  */}
               </div>
-              <p className="flex flex-col justify-around items-center px-3 pb-2">
+              <p className="flex flex-col md:flex-row justify-around items-center px-3 pb-2">
                 <strong className="bg-primary inline-block font-semibold line-through">
                   $330
                 </strong>
