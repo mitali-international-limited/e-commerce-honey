@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { useDispatch, useSelector } from "react-redux";
 import { toggle, favToggle } from "../../Store/slices/globalSlice";
@@ -98,9 +99,9 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="">
+                    <Link href="account" className="">
                       <span>Profile</span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
