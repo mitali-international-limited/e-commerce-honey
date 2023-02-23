@@ -5,7 +5,8 @@ import styles from "@/styles/Home.module.css";
 import ImageSlider from "../components/heroSlider/slider";
 import Categories from "../components/Categories";
 import Products from "../components/products";
-import Gallery from "../components/gallery"
+import Gallery from "../components/gallery";
+import ProductSection from "../components/HotProduct";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function Home() {
         <ImageSlider />
         <Categories />
         <Products />
-        <Gallery/>
+        <ProductSection />
+        <Gallery />
       </main>
     </>
   );
