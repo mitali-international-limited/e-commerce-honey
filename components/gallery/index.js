@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Gallery from "./gallery";
 import categoryData from "../../utils/gallery-demo-data";
 
-const gallerySection = () => {
+const GallerySection = () => {
   const [category, setCategory] = useState(categoryData);
   return (
     <section className="padding_inside ">
@@ -25,4 +25,4 @@ const gallerySection = () => {
   );
 };
 
-export default gallerySection;
+export default GallerySection;

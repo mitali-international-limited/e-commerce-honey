@@ -1,4 +1,6 @@
 import React from "react";
+import Head from "next/head";
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,6 +11,7 @@ import { MdLockOutline } from "react-icons/md";
 
 const Account = () => {
   return (
+  <>
     <div className=" flex flex-col items-center justify-center min-h-screen py-2 bg-primary mt-24">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
@@ -100,6 +103,7 @@ const Account = () => {
         </div>
       </main>
     </div>
+</>
   );
 };
 
