@@ -1,51 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoCall, IoMailSharp } from "react-icons/io5";
 
+import styles from "../Header/style.module.css";
+
 const Footer = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   return (
-    <footer className="bg-secondary padding_inside mb-20 md:mb-0">
-      <div className="md:flex justify-between items-start">
+    <footer className="bg-secondary padding_inside mb-20 md:mb-0 text-lg">
+      <div className="md:flex justify-between items-start md:pt-11">
         <div className="p-5 text-primary">
-          <h3 className="text-center from-left md:text-left">About Us</h3>
-          <hr />
+          <h4 className="text-center from-left md:text-left">
+            HONYHUT - for Mens and Women Enhancement
+          </h4>
           <div className="pt-2">
-            <p>About Chicky</p>
+            <p className=" md:max-w-lg">
+              Honyhut was founded in 2006 with vision of building the best
+              online store in the Nordics for children clothing. We want to
+              inspire by offering an exclusive shopping experience and excellent
+              customer service with the best mixture of high-quality brands.
+            </p>
+          </div>
+          <form
+            className={`relative w-full flex items-center pl-3 bg-white ${styles.item_form}  md:flex-1 basis-full m-3 md:order-2`}
+          >
+            <div className={`${styles.search_icon}`}></div>
+            <div className="grow">
+              <input
+                type="text"
+                placeholder={`What are you looking for today ...`}
+                className="appearance-none bg-white  text-base pl-10 py-4 pr-12 w-full focus:outline-none"
+                value={searchTerm}
+              />
+            </div>
+          </form>
+        </div>
+        <div className="p-5 text-primary">
+          <h4 className="text-center from-left md:text-left">Information</h4>
+          <hr />
+          <div className="pt-2 underline">
+            <p>About Honey Hut</p>
             <p>Gift Card</p>
-            <p>About Chicky</p>
-            <p>About Chicky</p>
+            <p>Sustainability</p>
+            <p>Career</p>
+            <p>Delivery Terms</p>
+            <p>Register Return Online</p>
+            <p>Cookies</p>
+            <p>Integrity Policy</p>
+            <p>Terms & Conditions</p>
           </div>
         </div>
         <div className="p-5 text-primary">
-          <h3 className="text-center from-right md:text-left">
+          <h4 className="text-center from-right md:text-left">
             Customer Services
-          </h3>
+          </h4>
           <hr />
-          <div className="pt-2">
-            <p>About Chicky</p>
-            <p>Gift Card</p>
-            <p>About Chicky</p>
-            <p>About Chicky</p>
+          <div className="pt-2 underline">
+            <p>Returns & Exchange</p>
+            <p>FAQs</p>
+            <p>Payment Methods</p>
+            <p>Contact Us</p>
+          </div>
+          <div className="pt-8">
+            <p>Customer service: + 46 (10) 7502423</p>
           </div>
         </div>
 
         <div className="p-5 text-primary">
-          <h3 className="text-center from-left md:text-left">Contact Us</h3>
+          <h4 className="text-center from-left md:text-left">Contact Us</h4>
           <hr />
           <div className="pt-2">
             <p className="flex space-x-1 items-center">
               <IoCall />
-              <span>+991 0123 4567 89</span>
+              <span className="underline">+991 0123 4567 89</span>
             </p>
             <p className="flex space-x-1 items-center">
               <IoMailSharp />
-              <span>chickyhoney@gmail.com</span>
+              <span className="underline">chickyhoney@gmail.com</span>
             </p>
           </div>
         </div>
       </div>
       <div>
-        <p className="text-center pb-4 text-primary">
-          All right reserve @ 2023
+        <p className="text-center py-4 text-primary">
+          Copyright Notice &copy; 2015-2023 Mitali International Limited and/or
+          its affiliates and licensors. All right reserve 2023 &trade;
         </p>
       </div>
     </footer>
