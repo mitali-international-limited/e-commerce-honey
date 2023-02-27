@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import categoryData from "../../utils/category-demo-data";
+import Link from "next/link";
 
 import styles from "./style.module.css";
 

@@ -13,7 +13,7 @@ const signup = () => {
     <div className=" flex flex-col items-center justify-center min-h-screen py-2 bg-primary mt-24">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-15 text-center">
         <div className="bg-white rounded-2xl shadow-2xl flex w-3/5 max-w-3xl">
-          {/* Sign in section */}
+          {/* Sign up section */}
           <div className="w-full p-5">
             <div className="text-left font-bold">
               <span className="text-secondary">Hony</span>Hut
@@ -24,7 +24,7 @@ const signup = () => {
               </h2>
               <div className="border-2 w-10 border-secondary inline-block mb-2"></div>
               {/* social login section */}
-              <div className="flex justify-center my-2">
+              {/* <div className="flex justify-center my-2">
                 <a
                   href="#"
                   className="border-2 border-secondary rounded-full p-3 mx-2"
@@ -43,8 +43,12 @@ const signup = () => {
                 >
                   <FaGoogle className="text-md" />
                 </a>
-              </div>
-              <p className="my-3 items-center">or</p>
+              </div> */}
+              <p className="my-3 items-center">or
+              <Link href="/account" className=" ml-2 px-4 py-4 text-secondary font-semibold">
+                        Login
+                    </Link>
+              </p>
               <div className="flex flex-col items-center">
                 <div className="bg-primary w-3/5 p-2 flex items-center mb-3 rounded-lg">
                   <MdOutlinePeople className="text-gray-400 m-1" />
@@ -83,10 +87,10 @@ const signup = () => {
                   />
                 </div>
                 <Link
-                  href="#"
+                  href="/"
                   className=" border-2 border-secondary rounded-full px-12 py-2 inline-block font-semibold hover:bg-secondary hover:text-white"
                 >
-                  Log In
+                  Sign Up
                 </Link>
               </div>
             </div>

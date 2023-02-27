@@ -1,5 +1,5 @@
 import React from "react";
-import Link from 'next/link';
+import Link from "next/link";
 import {
   FaFacebookF,
   FaInstagram,
@@ -12,13 +12,13 @@ const Account = () => {
   return (
     <div className=" flex flex-col items-center justify-center min-h-screen py-2 bg-primary mt-24">
       <main className="flex flex-col items-center justify-center w-full flex-1 px-15 text-center">
-        <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-4xl">
+        <div className="bg-white rounded-2xl shadow-2xl flex w-2/3 max-w-3xl">
           {/* Sign in section */}
           <div className="w-full p-5">
             <div className="text-left font-bold">
               <span className="text-secondary">Hony</span>Hut
             </div>
-            <div className="py-10">
+            <div className="py-8">
               <h2 className="text-3xl font-bold text-secondary mb-2">
                 Sign in to Account
               </h2>
@@ -66,16 +66,23 @@ const Account = () => {
                 </div>
                 <div className="flex justify-between w-3/5 mb-5">
                   <label className="flex items-center text-sm mt-1 cursor-pointer">
-                    <input type="checkbox" name="remember" className="mr-2 mb-1" />
+                    <input
+                      type="checkbox"
+                      name="remember"
+                      className="mr-2 mb-1"
+                    />
                     Remember me
                   </label>
-                  <a href="#" className="text-sm mt-1 cursor-pointer hover:text-secondary">
-                    Forgot Password?
-                  </a>
+                  <Link
+                    href="/forgotPass"
+                    className="text-sm mt-1 cursor-pointer text-secondary"
+                  >
+                    Forgot your Password?
+                  </Link>
                 </div>
 
                 <a
-                  href="#"
+                  href="/"
                   className=" border-2 border-secondary rounded-full px-12 py-2 inline-block font-semibold hover:bg-secondary hover:text-white"
                 >
                   Sign In
@@ -83,8 +90,11 @@ const Account = () => {
                 <div className=" flex ">
                   <p className="ml-2 py-4">
                     Don't you have account yet?
-                    <Link href="/signup" className=" ml-2 px-4 py-4 text-secondary font-semibold">
-                        Sign Up
+                    <Link
+                      href="/signup"
+                      className=" ml-2 px-4 py-4 text-secondary font-semibold"
+                    >
+                      Sign Up
                     </Link>
                   </p>
                 </div>
