@@ -84,7 +84,7 @@ const signup = () => {
                 <p className="ml-2 py-4">
                   Already have account!
                   <Link
-                    href="/auth/signup"
+                    href="/auth/signin"
                     className=" ml-2 px-4 py-4 text-secondary font-semibold"
                   >
                     Sign In

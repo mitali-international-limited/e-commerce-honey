@@ -16,18 +16,6 @@ const BottomMenu = () => {
           </a>
         </li>
         <li className="">
-          <a href="/">
-            <span className={`${styles.bottom_about}`}></span>
-            <span>About</span>
-          </a>
-        </li>
-        <li className="">
-          <a href="/">
-            <span className={`${styles.bottom_store}`}></span>
-            <span>Store</span>
-          </a>
-        </li>
-        <li className="">
           <Link
             href={{
               pathname: "/auth/signin",
@@ -37,6 +25,18 @@ const BottomMenu = () => {
             <span className={`${styles.bottom_account}`}></span>
             <span>Profile</span>
           </Link>
+        </li>
+        <li className="">
+          <a href="/">
+            <span className={`${styles.bottom_store}`}></span>
+            <span>Store</span>
+          </a>
+        </li>
+        <li className="">
+          <a href="/">
+            <span className={`${styles.bottom_about}`}></span>
+            <span>About</span>
+          </a>
         </li>
       </ul>
     </nav>
