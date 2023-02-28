@@ -18,7 +18,7 @@ const signup = () => {
             <span className="text-secondary">Hony</span>Hut
             <span className="text-tertiary">.com</span>
           </div>
-          <div className="py-8">
+          <div>
             <h2 className="text-3xl font-bold text-secondary mb-2 uppercase">
               Create An Account
             </h2>
@@ -46,7 +46,7 @@ const signup = () => {
             </div>
             <p className="my-6 uppercase">or</p>
             <div className="flex flex-col items-center">
-              <div className="bg-primary w-3/5 p-2 flex items-center mb-3 rounded-lg">
+              <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded-lg">
                 <MdOutlinePeople className="text-gray-400 m-1" />
                 <input
                   type="text"
@@ -55,7 +55,7 @@ const signup = () => {
                   className="bg-primary outline-none text-sm flex-1"
                 />
               </div>
-              <div className="bg-primary w-3/5 p-2 flex items-center mb-3 rounded-lg">
+              <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded-lg">
                 <FaRegEnvelope className="text-gray-400 m-1" />
                 <input
                   type="email"
@@ -64,7 +64,7 @@ const signup = () => {
                   className="bg-primary outline-none text-sm flex-1"
                 />
               </div>
-              <div className="bg-primary w-3/5 p-2 flex items-center mb-3 rounded-lg">
+              <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded-lg">
                 <MdLockOutline className="text-gray-400 m-1" />
                 <input
                   type="password"
