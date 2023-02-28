@@ -15,7 +15,9 @@ module.exports = {
       'primary': '#FAF3ED',
       'secondary': '#AB426D',
       'tertiary': '#BE0EE2',
-      'primary-red': '#F44141'
+      'primary-red': '#F44141',
+      'black': '#000000',
+      'gray' : '#a0aec0'
     },
   },
   plugins: [],
