@@ -115,7 +115,7 @@ const product = () => {
               </button>
             </div>
             <div className="flex">
-              <div className="flex m-auto mt-2 py-2 px-6 border text-secondary text-center rounded-full">
+              <div className="flex mt-2 py-2 px-6 border text-secondary text-center rounded-full">
                 <button className="mx-2 text-black hover:text-secondary">
                   <FaMinus />
                 </button>
@@ -124,8 +124,8 @@ const product = () => {
                   <FaPlus />
                 </button>
               </div>
-              <button className=" flex justify-center mt-2 text-secondary border-2 py-2 px-6 text-center font-semibold hover:bg-secondary hover:text-white rounded-full">
-                Place Order
+              <button className="flex ml-auto text-secondary mt-2 border-2 py-4 px-6 hover:bg-secondary hover:text-white rounded-full">
+                Add to Cart
               </button>
             </div>
           </div>
