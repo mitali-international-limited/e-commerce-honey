@@ -19,7 +19,7 @@ const signup = () => {
             <span className="text-tertiary">.com</span>
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-secondary mb-2 uppercase">
+            <h2 className="text-4xl font-bold text-secondary mb-2 uppercase">
               Create An Account
             </h2>
             <div className="border-2 w-10 border-secondary inline-block mb-2"></div>
@@ -29,7 +29,7 @@ const signup = () => {
                 href="#"
                 className="border-2 border-secondary rounded-full p-3 mx-2"
               >
-                <FaFacebookF className="text-sm" />
+                <FaFacebookF className="text-sm lg:text-base" />
               </a>
               <a
                 href="#"
@@ -41,36 +41,36 @@ const signup = () => {
                 href="#"
                 className="border-2 border-secondary rounded-full p-3 mx-2"
               >
-                <FaGoogle className="text-sm" />
+                <FaGoogle className="text-sm lg:text-base" />
               </a>
             </div>
             <p className="my-6 uppercase">or</p>
             <div className="flex flex-col items-center">
               <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded-lg">
-                <MdOutlinePeople className="text-gray-400 m-1" />
+                <MdOutlinePeople className="text-gray m-1" />
                 <input
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="bg-primary outline-none text-sm flex-1"
+                  className="bg-primary outline-none text-sm lg:text-base flex-1"
                 />
               </div>
               <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded-lg">
-                <FaRegEnvelope className="text-gray-400 m-1" />
+                <FaRegEnvelope className="text-gray m-1" />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="bg-primary outline-none text-sm flex-1"
+                  className="bg-primary outline-none text-sm lg:text-base flex-1"
                 />
               </div>
               <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded-lg">
-                <MdLockOutline className="text-gray-400 m-1" />
+                <MdLockOutline className="text-gray m-1" />
                 <input
                   type="password"
                   name="password"
                   placeholder="Enter Password"
-                  className="bg-primary outline-none text-sm flex-1"
+                  className="bg-primary outline-none text-sm lg:text-base flex-1"
                 />
               </div>
 
