@@ -1,21 +1,28 @@
 import React, { useState } from "react";
 import Gallery from "../gallery";
-import categoryData from "../../utils/gallery-demo-data";
+import Card from "../Card";
+
+import productData from "../../utils/products-demo";
 
 const ProductSection = () => {
-  const [category, setCategory] = useState(categoryData);
+  const [product, setProduct] = useState(productData);
   return (
-    <section className="padding_inside m-20">
+    <section className="padding_inside">
       <h2 className="mb-0 ">Hot Products</h2>
       <hr className="h-px my-8 bg-secondary border-0 dark:bg-secondary" />
-      <div className="grid grid-cols-4 items-center gap-3 justify-between md:grid-cols-4">
-        {category.map((item, index) => {
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-5">
+        {product.map((item, index) => {
           return (
-            <Gallery
+            <Card
               key={index}
               name={item.name}
               image={item.image}
-              cardType="category"
+              category={item.category}
+              quote={item.quote}
+              quantity={item.quantity}
+              price={item.price}
+              categoryType={`products`}
+              percentage={`30%`}
             />
           );
         })}

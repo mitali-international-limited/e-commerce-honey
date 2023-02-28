@@ -8,7 +8,7 @@ const Products = () => {
     <section className="padding_inside">
       <h2 className="mb-0 ">Top Products</h2>
       <hr className="h-px my-8 bg-secondary border-0 dark:bg-secondary" />
-      <div className="grid grid-cols-3 m-5 gap-1 justify-between md:grid-cols-6 sm:grid-cols-3">
+      <div className="grid grid-cols-3 m-5 gap-1 md:grid-cols-5 sm:grid-cols-3">
         {product.map((item, index) => {
           return (
             <Card
@@ -20,6 +20,7 @@ const Products = () => {
               quantity={item.quantity}
               price={item.price}
               categoryType={`products`}
+              percentage={`20%`}
             />
           );
         })}
