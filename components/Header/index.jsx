@@ -99,7 +99,12 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <Link href="account" className="">
+                    <Link
+                      href={{
+                        pathname: "/auth/signin",
+                      }}
+                      className=""
+                    >
                       <span>Profile</span>
                     </Link>
                   </li>

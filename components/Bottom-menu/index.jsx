@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import styles from "./style.module.css";
 
@@ -27,10 +28,15 @@ const BottomMenu = () => {
           </a>
         </li>
         <li className="">
-          <a href="/">
+          <Link
+            href={{
+              pathname: "/auth/signin",
+            }}
+            className=""
+          >
             <span className={`${styles.bottom_account}`}></span>
             <span>Profile</span>
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
