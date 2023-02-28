@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
+import Link from "next/link";
 
 import data from "../../utils/data-demo";
 import Button from "../Button";
@@ -47,7 +48,7 @@ const Slider = () => {
                   className="h-12 w-15 m-2 rounded-full"
                 ></img>
               </span>
-              <span className="m-2 pt-1">Section 1</span>
+                <span className="m-2 pt-1">Section 1</span>
             </div>
             <img
               src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
