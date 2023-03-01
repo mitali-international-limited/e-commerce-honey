@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
           </div>
           <form
-            className={`relative w-full flex items-center pl-3 bg-white ${styles.item_form}  md:flex-1 basis-full m-3 md:order-2`}
+            className={`relative w-full flex items-center pl-3 bg-white focus-within:border focus-within:border-secondary  md:flex-1 basis-full m-3 md:order-2`}
           >
             <div className={`${styles.search_icon}`}></div>
             <div className="grow">

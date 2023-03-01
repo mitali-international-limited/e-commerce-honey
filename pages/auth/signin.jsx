@@ -1,3 +1,14 @@
+// This is account section
+{
+  /*//This section contains:
+  * sign in
+  * sign up
+  * forget password 
+  * 
+  Author: Munna 
+*/
+}
+
 import React from "react";
 
 import Link from "next/link";
@@ -9,18 +20,19 @@ import {
 } from "react-icons/fa";
 import { MdLockOutline } from "react-icons/md";
 
-const AuthAccount = () => {
+const SignIn = () => {
   return (
-    <main className="relative mt-24 max-h-screen w-full bg-primary">
-      <div className="bg-white rounded-2xl shadow-2xl flex w-full text-center">
+    <main className="relative mt-44  w-full bg-primary md:flex md:justify-center md:items-center md:p-10">
+      <div className="bg-white flex justify-center items-center  w-full text-center md:rounded-2xl md:shadow-2xl md:px-16 md:flex md:w-3/5 md:max-w-4xl">
         {/* Sign in section */}
-        <div className="w-full p-5">
-          <div className="text-left font-bold">
+        <div className="w-full py-5">
+          <div className="text-center md:text-left  font-bold">
             <span className="text-secondary">Hony</span>Hut
+            <span className="text-tertiary">.com</span>
           </div>
-          <div className="py-8">
-            <h2 className="text-3xl font-bold text-secondary mb-2">
-              Sign in to Account
+          <div>
+            <h2 className="text-3xl font-bold text-secondary mb-2 uppercase">
+              Sign in
             </h2>
             <div className="border-2 w-10 border-secondary inline-block mb-2"></div>
             {/* social login section */}
@@ -44,28 +56,28 @@ const AuthAccount = () => {
                 <FaGoogle className="text-sm" />
               </a>
             </div>
-            <p className="my-3">or use your email for log in</p>
+            <p className="my-6 uppercase">or</p>
             <div className="flex flex-col items-center">
-              <div className="bg-primary w-3/5 p-2 flex items-center mb-3 rounded">
-                <FaRegEnvelope className="text-gray-400 m-2" />
+              <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded">
+                <FaRegEnvelope className="text-gray m-2" />
                 <input
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="bg-primary outline-none text-sm flex-1"
+                  className="bg-primary outline-none text-sm lg:text-base flex-1"
                 />
               </div>
-              <div className="bg-primary w-3/5 p-2 flex items-center mb-3 rounded">
-                <MdLockOutline className="text-gray-400 m-2" />
+              <div className="bg-primary w-3/4 p-2 flex items-center mb-3 rounded">
+                <MdLockOutline className="text-gray m-2" />
                 <input
                   type="password"
                   name="password"
                   placeholder="Password"
-                  className="bg-primary outline-none text-sm flex-1"
+                  className="bg-primary outline-none text-sm lg:text-base flex-1"
                 />
               </div>
-              <div className="flex justify-between w-3/5 mb-5">
-                <label className="flex items-center text-sm mt-1 cursor-pointer">
+              <div className="flex justify-between w-3/4 mb-5">
+                <label className="flex items-center text-sm lg:text-base mt-1 cursor-pointer">
                   <input
                     type="checkbox"
                     name="remember"
@@ -75,23 +87,23 @@ const AuthAccount = () => {
                 </label>
                 <Link
                   href="/forgotPass"
-                  className="text-sm mt-1 cursor-pointer text-secondary"
+                  className="text-sm md:text-base mt-1 cursor-pointer text-secondary"
                 >
                   Forgot your Password?
                 </Link>
               </div>
 
-              <a
-                href="/"
+              <Link
+                href="/auth/signin"
                 className=" border-2 border-secondary rounded-full px-12 py-2 inline-block font-semibold hover:bg-secondary hover:text-white"
               >
                 Sign In
-              </a>
+              </Link>
               <div className=" flex ">
                 <p className="ml-2 py-4">
                   Don't you have account yet?
                   <Link
-                    href="/signup"
+                    href="/auth/signup"
                     className=" ml-2 px-4 py-4 text-secondary font-semibold"
                   >
                     Sign Up
@@ -106,4 +118,4 @@ const AuthAccount = () => {
   );
 };
 
-export default AuthAccount;
+export default SignIn;

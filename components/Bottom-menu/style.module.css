@@ -6,6 +6,7 @@
   width: 100%;
   /* height: auto; */
   height: 70px;
+  z-index: 999;
 }
 .bottom_home {
   height: 30px;

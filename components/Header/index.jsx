@@ -68,7 +68,7 @@ const Header = () => {
                 <span>Menu</span>
               </p>
             </div>
-            <div className={`${styles.logo_box} md:order-1`}></div>
+            <a href="/" className={`${styles.logo_box} md:order-1`}></a>
             <div className="basis-16 flex justify-center items-center space-x-5 md:order-4">
               <div
                 className={styles.favourite_cart}
@@ -99,7 +99,12 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <Link href="account" className="">
+                    <Link
+                      href={{
+                        pathname: "/auth/signin",
+                      }}
+                      className=""
+                    >
                       <span>Profile</span>
                     </Link>
                   </li>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import styles from "./style.module.css";
 
@@ -15,10 +16,15 @@ const BottomMenu = () => {
           </a>
         </li>
         <li className="">
-          <a href="/">
-            <span className={`${styles.bottom_about}`}></span>
-            <span>About</span>
-          </a>
+          <Link
+            href={{
+              pathname: "/auth/signin",
+            }}
+            className=""
+          >
+            <span className={`${styles.bottom_account}`}></span>
+            <span>Profile</span>
+          </Link>
         </li>
         <li className="">
           <a href="/">
@@ -28,8 +34,8 @@ const BottomMenu = () => {
         </li>
         <li className="">
           <a href="/">
-            <span className={`${styles.bottom_account}`}></span>
-            <span>Profile</span>
+            <span className={`${styles.bottom_about}`}></span>
+            <span>About</span>
           </a>
         </li>
       </ul>
