@@ -21,10 +21,10 @@
 }
 @media screen and (min-width: 778px) {
   .section_slider {
-    height: 60vh;
+    height: 80vh;
   }
   .section_center {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -102,4 +102,6 @@ article.nextSlide {
 }
 .next {
   right: 0;
+}
+.dropdown_content {
 }

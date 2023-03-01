@@ -10,14 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    colors:{
-      'white': '#FFF',
-      'primary': '#FAF3ED',
-      'secondary': '#AB426D',
-      'tertiary': '#BE0EE2',
-      'primary-red': '#F44141',
-      'black': '#000000',
-      'gray' : '#a0aec0',
+    colors: {
+      white: "#FFF",
+      primary: "#FAF3ED",
+      secondary: "#AB426D",
+      tertiary: "#BE0EE2",
+      "primary-red": "#F44141",
+      black: "#000000",
+      gray: "#a0aec0",
+      honey: "#f9c901",
     },
   },
   plugins: [],

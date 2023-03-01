@@ -134,3 +134,19 @@ img {
   background-position: center;
   background-size: cover;
 }
+.scrollable-content {
+  overflow-y: scroll;
+}
+.scrollable-content::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+ul li a:hover,
+ul li a:focus,
+ul li a:active {
+  @apply text-honey;
+}

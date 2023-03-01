@@ -113,7 +113,7 @@ const Header = () => {
             </div>
             <form
               onSubmit={handleSubmit}
-              className={`${styles.search_bar} ${styles.item_form} md:flex-1 basis-full m-3 md:order-2`}
+              className={`${styles.search_bar} ${styles.item_form} md:flex-1 basis-full md:mx-6 md:order-2`}
             >
               <div className={styles.search_icon}></div>
               <div className="grow">
@@ -128,12 +128,10 @@ const Header = () => {
             </form>
           </div>
         </div>
-        <div className="hidden md:block">
-          <hr className="h-px bg-secondary border-0 dark:bg-secondary" />
-          <div className=" my-auto w-full text-lg bg-white">
+        <div className="hidden md:flex">
+          <div className=" my-auto w-full text-lg bg-white shadow-primary drop-shadow-md">
             <Navigation />
           </div>
-          <hr className="h-px bg-secondary border-0 dark:bg-secondary" />
         </div>
       </div>
       <Sidebar />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
+import { TiChevronRight } from "react-icons/ti";
 import Link from "next/link";
 
 import data from "../../utils/data-demo";
@@ -37,109 +38,64 @@ const Slider = () => {
     >
       {/* left section */}
 
-      <div className="bg-primary mx-10 w-25% h-auto hidden md:block">
-        <div className=" ">
-          <div className="flex justify-between p-4 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
+      <div className="scrollable-content border-t-2 border-t-honey bg-primary text-secondary mx-10 w-80 h-auto hidden md:block shadow-xl">
+        <div className={`${styles.dropdown_content}`}>
+          <ul className="grid   text-lg">
+            <li className="space-x-2 py-5 px-9 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Royal Honey</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
               </span>
-                <span className="m-2 pt-1">Section 1</span>
-            </div>
-            <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-              className="h-10 w-10 m-2 pt-2"
-            ></img>
-          </div>
-
-          <div className="flex justify-between p-3 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Black Bull Honey</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
               </span>
-              <span className="m-2 pt-1">Section 2</span>
-            </div>
-            <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-              className="h-10 w-10 m-2 pt-2"
-            ></img>
-          </div>
-
-          <div className="flex justify-between p-3 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Blue Bull Honey</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
               </span>
-              <span className="m-2 pt-1">Section 3</span>
-            </div>
-            <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-              className="h-10 w-10 m-2 pt-2"
-            ></img>
-          </div>
-
-          <div className="flex justify-between p-3 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Extumas Honey</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
               </span>
-              <span className="m-2 pt-1">Section 4</span>
-            </div>
-            <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-              className="h-10 w-10 m-2 pt-2"
-            ></img>
-          </div>
-
-          <div className="flex justify-between p-3 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">VIP Honey</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
               </span>
-              <span className="m-2 pt-1">Section 5</span>
-            </div>
-            <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-              className="h-10 w-10 m-2 pt-2"
-            ></img>
-          </div>
-
-          <div className="flex justify-between p-3 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Gold Honey</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
               </span>
-              <span className="m-2 pt-1">Section 6</span>
-            </div>
-            <img
-              src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-              className="h-10 w-10 m-2 pt-2"
-            ></img>
-          </div>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Leopard Miracle</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
+              </span>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Leopard Miracle</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
+              </span>
+            </li>
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+              <a className=" font-semibold">Leopard Miracle</a>
+              <span>
+                <TiChevronRight className="text-secondary" />
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -171,7 +127,8 @@ const Slider = () => {
                 responsive
                 className={styles.person_img}
               />
-              <div className={`${styles.slider_content} from-bottom`}>
+              {/**
+            <div className={`${styles.slider_content} from-bottom`}>
                 <div>
                   <h4>{name}</h4>
                   <p className={styles.title}>{title}</p>
@@ -181,6 +138,7 @@ const Slider = () => {
                   </Button>
                 </div>
               </div>
+            */}
             </article>
           );
         })}
@@ -195,109 +153,7 @@ const Slider = () => {
       {/* right section */}
 
       <div className="bg-primary mx-10 w-25% h-auto hidden md:block">
-        <div className=" ">
-          <div className="flex justify-between py-3 mt- mb- cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-                className="h-10 w-10 m-2 pb-2 rotate-180"
-              ></img>
-              <span className="m-2 pt-1">Section 1</span>
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-between py-2 mt-2 mb-2 cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-                className="h-10 w-10 m-2 pb-2 rotate-180"
-              ></img>
-              <span className="m-2 pt-1">Section 2</span>
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-between py-2 mt-2 mb-2 cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-                className="h-10 w-10 m-2 rotate-180 pb-2"
-              ></img>
-              <span className="m-2 pt-1">Section 3</span>
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-between py-2 mt-2 mb-2 cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-                className="h-10 w-10 m-2 rotate-180 pb-2"
-              ></img>
-              <span className="m-2 pt-1">Section 4</span>
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-between py-2 mt-2 mb-2 cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-                className="h-10 w-10 m-2 rotate-180	pb-2"
-              ></img>
-              <span className="m-2 pt-1">Section 5</span>
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex justify-between py-3 mt-2 mb-2 cursor-pointer hover:bg-white">
-            <div className="flex justify-between">
-              <img
-                src="https://img.alicdn.com/imgextra/i2/O1CN01fxbIHT1bncwfIiBKg_!!6000000003510-2-tps-32-32.png"
-                className="h-10 w-10 m-2 rotate-180	pb-2"
-              ></img>
-              <span className="m-2 pt-1">Section 6</span>
-              <span className="flex justify-between">
-                <img
-                  src="https://img.alicdn.com/imgextra/i3/O1CN01cq8Gpz1df2kx1RvCH_!!6000000003762-2-tps-80-80.png"
-                  alt=""
-                  className="h-12 w-15 m-2 rounded-full"
-                ></img>
-              </span>
-            </div>
-          </div>
-        </div>
+        <div className=" "></div>
       </div>
     </section>
   );
