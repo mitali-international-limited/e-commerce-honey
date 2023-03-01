@@ -15,7 +15,7 @@ const people = [
     name: "Blue Bull",
     category: "Male enhancement Supplement",
     quote: "Extra strength",
-    quantity: "15 pouches",
+    quantity: "15 pcs",
     price: "$150",
   },
   {
