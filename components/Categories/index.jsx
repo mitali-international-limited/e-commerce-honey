@@ -10,7 +10,7 @@ const Categories = () => {
   return (
     <section className={`padding_inside my-20`}>
       <h2 className="mb-0">Top Categories</h2>
-      <hr className="h-px my-8 bg-secondary border-0 dark:bg-secondary" />
+      <hr className="h-px my-8 bg-gray border-0 dark:bg-gray" />
       <div className="grid grid-cols-2 items-center gap-3 justify-between p-6 md:grid-cols-4">
         {category.map((item, index) => {
           return (

@@ -5,6 +5,7 @@ import styles from "@/styles/Home.module.css";
 import ImageSlider from "../components/heroSlider/slider";
 import Categories from "../components/Categories";
 import Products from "../components/products";
+import Women from "../components/products/womenSec"
 import Gallery from "../components/gallery";
 import ProductSection from "../components/HotProduct";
 import StoreProduct from "../components/storeProduct";
@@ -26,6 +27,7 @@ export default function Home() {
         <Categories />
         <Products />
         <ProductSection />
+        <Women/>
         <Gallery />
       </main>
     </>
