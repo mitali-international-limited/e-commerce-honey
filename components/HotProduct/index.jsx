@@ -7,7 +7,7 @@ import productData from "../../utils/products-demo";
 const ProductSection = () => {
   const [product, setProduct] = useState(productData);
   return (
-    <section className="padding_inside">
+    <section className="padding_inside relative top-36">
       <h2 className="mb-0 ">Hot Products</h2>
       <hr className="h-px my-8 bg-secondary border-0 dark:bg-secondary" />
       <div className="grid grid-cols-2 md:grid-cols-5 gap-5">

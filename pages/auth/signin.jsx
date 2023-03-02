@@ -22,7 +22,7 @@ import { MdLockOutline } from "react-icons/md";
 
 const SignIn = () => {
   return (
-    <main className="relative mt-44  w-full bg-primary md:flex md:justify-center md:items-center md:p-10">
+    <main className="relative top-36 w-full h-auto bg-primary md:flex md:justify-center md:items-center md:p-10">
       <div className="bg-white flex justify-center items-center  w-full text-center md:rounded-2xl md:shadow-2xl md:px-16 md:flex md:w-3/5 md:max-w-4xl">
         {/* Sign in section */}
         <div className="w-full py-5">

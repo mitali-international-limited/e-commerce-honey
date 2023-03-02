@@ -1,11 +1,18 @@
 .header_container {
-  height: 112px;
+  height: 110px;
   width: 100vw;
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
 }
+
+.header_bottom {
+  width: 100%;
+  height: 50%;
+  @apply bg-secondary;
+}
+
 .logo_box {
   height: 3.5rem;
   width: 7.5rem;
@@ -22,75 +29,66 @@
     width: 13rem;
   }
   .header_container {
-    height: 135px;
+    height: 60px;
   }
 }
 
 .menu_button {
   height: 28px;
   width: 28px;
-  background-image: url("../../Assets/icons8-menu-48\ \(2\).png");
+  background-image: url("../../Assets/menu-btn.svg");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.drp_menu {
+  height: 28px;
+  width: 28px;
+  background-image: url("../../Assets/list.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
 }
 
 .shopping_cart {
-  height: 38px;
-  width: 38px;
-  background-image: url("../../Assets/shop-cart.svg");
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-}
-
-.favourite_cart {
-  height: 28px;
-  width: 28px;
-  background-image: url("../../Assets/favourite.svg");
+  height: 30px;
+  width: 30px;
+  background-image: url("../../Assets/shopping.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
 }
 
 .search_icon {
-  height: 20px;
-  width: 20px;
-  background-image: url("../../Assets/icons8-search-50.png");
+  height: 25px;
+  width: 25px;
+  background-image: url("../../Assets/search\ icon.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
 }
-.favorite_count {
-  height: 1.5rem;
-  width: 1.5rem;
-  position: absolute;
-  top: 0.5rem;
-  right: 6rem;
-  border-radius: 50%;
-  @apply bg-secondary;
-  @apply text-primary;
-  text-align: center;
-}
 
-@media screen and (min-width: 778px) {
+/* @media screen and (min-width: 778px) {
   .favorite_count {
     font-size: 12px;
     top: 1.8rem;
     right: 6rem;
   }
-}
+} */
 
 .cart_count {
-  height: 1.5rem;
-  width: 1.5rem;
-  @apply bg-tertiary;
+  height: 1.7rem;
+  width: 1.7rem;
+  @apply bg-black;
   position: absolute;
-  top: 0.5rem;
-  right: 2rem;
+  top: 0.6rem;
+  right: 2.2rem;
+  border: 1px solid;
   border-radius: 50%;
-  @apply text-primary;
-  text-align: center;
+  @apply text-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 778px) {
   .cart_count {

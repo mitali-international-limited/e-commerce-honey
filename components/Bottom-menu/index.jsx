@@ -10,12 +10,6 @@ const BottomMenu = () => {
     >
       <ul className="h-full w-full flex justify-between items-center text-primary text-bold text-lg">
         <li className="">
-          <a href="/" className="">
-            <span className={`${styles.bottom_home}`}></span>
-            <span>Home</span>
-          </a>
-        </li>
-        <li className="">
           <Link
             href={{
               pathname: "/auth/signin",
@@ -25,6 +19,18 @@ const BottomMenu = () => {
             <span className={`${styles.bottom_account}`}></span>
             <span>Profile</span>
           </Link>
+        </li>
+        <li>
+          <a href="/" className="flex flex-col items-center justify-center">
+            <span className={styles.favourite_cart}></span>
+            <span>Favorite</span>
+          </a>
+        </li>
+        <li className="">
+          <a href="/" className="">
+            <span className={`${styles.bottom_home}`}></span>
+            <span>Home</span>
+          </a>
         </li>
         <li className="">
           <a href="/">

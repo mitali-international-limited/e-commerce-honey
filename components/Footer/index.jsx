@@ -6,7 +6,7 @@ import styles from "../Header/style.module.css";
 const Footer = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
-    <footer className="bg-secondary padding_inside mb-20 md:mb-0 text-lg">
+    <footer className="bg-secondary padding_inside relative bottom-20 md:bottom-0 text-lg">
       <div className="md:flex justify-between items-start md:pt-11">
         <div className="p-5 text-primary">
           <h4 className="text-center from-left md:text-left">

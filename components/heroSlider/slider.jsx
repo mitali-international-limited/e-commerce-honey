@@ -127,18 +127,12 @@ const Slider = () => {
                 responsive
                 className={styles.person_img}
               />
-              {/**
-            <div className={`${styles.slider_content} from-bottom`}>
-                <div>
-                  <h4>{name}</h4>
-                  <p className={styles.title}>{title}</p>
-                  <p className={styles.text}>{quote}</p>
-                  <Button className="bg-secondary hover:bg-tertiary">
-                    Shop Now
-                  </Button>
-                </div>
+
+              <div className={`${styles.slider_content} from-bottom`}>
+                <Button className="bg-secondary text-primary hover:bg-primary hover:text-black">
+                  Shop Now
+                </Button>
               </div>
-            */}
             </article>
           );
         })}
@@ -151,10 +145,6 @@ const Slider = () => {
       </div>
 
       {/* right section */}
-
-      <div className="bg-primary mx-10 w-25% h-auto hidden md:block">
-        <div className=" "></div>
-      </div>
     </section>
   );
 };

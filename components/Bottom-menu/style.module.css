@@ -12,7 +12,7 @@
   height: 30px;
   width: 30px;
   display: block;
-  background-image: url("../../Assets/home.png");
+  background-image: url("../../Assets//HomeE.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -21,7 +21,7 @@
   height: 30px;
   width: 30px;
   display: block;
-  background-image: url("../../Assets/icons8-about-50.png");
+  background-image: url("../../Assets/info.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -30,7 +30,8 @@
   height: 30px;
   width: 30px;
   display: block;
-  background-image: url("../../Assets/icons8-online-store-24.png");
+
+  background-image: url("../../Assets/store.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -39,8 +40,28 @@
   height: 30px;
   width: 30px;
   display: block;
-  background-image: url("../../Assets/icons8-customer-50.png");
+  background-image: url("../../Assets/userprofile.png");
   background-position: center;
   background-size: cover;
   cursor: pointer;
+}
+.favourite_cart {
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-image: url("../../Assets/edited.svg");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.favorite_count {
+  /* height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 6rem;
+  border-radius: 50%;
+  @apply bg-secondary;
+  @apply text-primary;
+  text-align: center; */
 }

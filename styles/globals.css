@@ -23,7 +23,7 @@ body {
 
 body {
   color: #222222;
-  background-color: #fff;
+  @apply bg-primary;
   font-family: My Font, sans-serif;
   line-height: 1.5;
 }
@@ -149,4 +149,11 @@ ul li a:hover,
 ul li a:focus,
 ul li a:active {
   @apply text-honey;
+}
+
+@media screen and (min-width: 778px) {
+  .grid_cols_5 {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
 }
