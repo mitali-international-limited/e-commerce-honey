@@ -11,10 +11,11 @@ import Sidebar from "../Sidebar";
 import Navigation from "../Navigation";
 import Favorite from "../favorite";
 import DropdownCategory from "../dropdown-category";
+import CategoryNav from "../category-nav";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState(false);
-  const [isSticky, setSticky] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // sticky Header
   // useEffect(() => {
@@ -59,6 +60,11 @@ const Header = () => {
     setSearchTerm(!searchTerm);
   };
 
+  const openCategoryMenu = (e) => {
+    e.preventDefault();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className={`${styles.header_container}`}>
       <div className="padding_inside bg-primary h-1/2 md:h-full w-full">
@@ -95,13 +101,8 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <Link
-                      href={{
-                        pathname: "/auth/signin",
-                      }}
-                      className=""
-                    >
-                      <span>Profile</span>
+                    <Link href="/">
+                      <span>Product</span>
                     </Link>
                   </li>
                 </ul>
@@ -110,11 +111,17 @@ const Header = () => {
           </div>
         </div>
       </div>
+      {/** */}
+
+      {/**Searchbar start */}
       <div
         className={`${styles.header_bottom} padding_inside md:hidden flex justify-between items-center`}
       >
         <div className="flex justify-center items-center space-x-2 text-white">
-          <div className={`${styles.drp_menu}`}></div>
+          <div
+            className={`${styles.drp_menu}`}
+            onClick={openCategoryMenu}
+          ></div>
           <p className="text-xl">Shop by category</p>
         </div>
         <div onClick={openSearchBar}>
@@ -131,8 +138,15 @@ const Header = () => {
           />
         </form>
       )}
+
+      <div
+        className={`${styles.dropdownMenu} ${
+          isMenuOpen ? `${styles.open}` : ""
+        }`}
+      >
+        <CategoryNav />
+      </div>
       <Sidebar />
-      <DropdownCategory />
     </div>
   );
 };

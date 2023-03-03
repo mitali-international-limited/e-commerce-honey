@@ -9,7 +9,11 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        128: "75vh",
+      },
+    },
     colors: {
       white: "#FFF",
       primary: "#FAF3ED",
