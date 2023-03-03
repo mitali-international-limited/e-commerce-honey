@@ -7,7 +7,7 @@ const CategoryNav = () => {
   return (
     <nav className={`${styles.table_content} text-xl`}>
       <ul className="grid">
-        <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
+        <li className={`py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer`}>
           <a>Honey</a>
           <span>
             <TiArrowSortedDown className="text-secondary" />
@@ -37,19 +37,7 @@ const CategoryNav = () => {
             <TiArrowSortedDown className="text-secondary" />
           </span>
         </li>
-        <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-          <a>Pills</a>
-          <span>
-            <TiArrowSortedDown className="text-secondary" />
-          </span>
-        </li>
-        <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-          <a>Pills</a>
-          <span>
-            <TiArrowSortedDown className="text-secondary" />
-          </span>
-        </li>
-        <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
+        <li className=" py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
           <a>Pills</a>
           <span>
             <TiArrowSortedDown className="text-secondary" />
