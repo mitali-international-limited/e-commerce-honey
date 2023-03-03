@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styles from "./sidebar.module.css";
+import CategoryNav from "../category-nav";
 import { FaTimes } from "react-icons/fa";
-import { TiArrowSortedDown } from "react-icons/ti";
 
 import { useDispatch, useSelector } from "react-redux";
 
@@ -48,46 +48,7 @@ const Sidebar = () => {
         </ul>
       </nav>
       <hr className="text-secondary font-bold" />
-      <nav className={`${styles.table_content} text-xl`}>
-        <ul className="grid">
-          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-            <a>Honey</a>
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
-          </li>
-          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-            <a>Male enhancement</a>
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
-          </li>
-          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-            <a>Female enhancement</a>
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
-          </li>
-          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-            <a>Rolling Paper</a>
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
-          </li>
-          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-            <a>Condoms</a>
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
-          </li>
-          <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer">
-            <a>Pills</a>
-            <span>
-              <TiArrowSortedDown className="text-secondary" />
-            </span>
-          </li>
-        </ul>
-      </nav>
+      <CategoryNav />
     </div>
   );
 };
