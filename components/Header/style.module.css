@@ -11,25 +11,23 @@
   width: 100%;
   height: 50%;
   @apply bg-secondary;
+  box-shadow: 0px 2px 0px 0px rgba(249, 201, 1, 1);
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(249, 201, 1, 1);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(249, 201, 1, 1);
 }
 
 .logo_box {
-  height: 3.5rem;
-  width: 7.5rem;
-  /* flex-basis: 50%; */
-  background-image: url("../../Assets/logoH.png");
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
+  width: 60px;
+  height: 40px;
 }
 
 @media screen and (min-width: 778px) {
   .logo_box {
-    height: 6rem;
-    width: 13rem;
+    height: 3rem;
+    width: 7rem;
   }
   .header_container {
-    height: 90px;
+    height: 72px;
   }
 }
 
@@ -38,7 +36,7 @@
   width: 28px;
   background-image: url("../../Assets/menu-btn.svg");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   cursor: pointer;
 }
 .drp_menu {

@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggle, favToggle } from "../../Store/slices/globalSlice";
 
 import styles from "./style.module.css";
-
+import logo from "../../Assets/logo 1.png";
 import Sidebar from "../Sidebar";
 import Navigation from "../Navigation";
 import Favorite from "../favorite";
@@ -68,10 +68,17 @@ const Header = () => {
   return (
     <div className={`${styles.header_container}`}>
       <div className="padding_inside bg-primary h-1/2 md:h-full w-full">
-        <div id="myHeader" className="grid gap-1 padding_inside items-center ">
-          <div className="flex justify-between items-center flex-wrap py-3">
-            <a href="/" className={`${styles.logo_box} md:order-1`}></a>
-            <div className=" flex justify-center items-center space-x-5 md:order-4">
+        <div
+          id="myHeader"
+          className="relative grid gap-1 padding_inside items-center "
+        >
+          <div className="flex  justify-between h-full w-full items-center flex-wrap py-3">
+            {/**logo */}
+            <div className={`${styles.logo_box}`}>
+              <Image src={logo} cover />
+            </div>
+            {/**cart */}
+            <div className="md:hidden flex justify-center items-center space-x-5 md:order-4">
               <div
                 className={`${styles.menu_button} md:hidden`}
                 onClick={handleMenuOnClick}
@@ -82,6 +89,7 @@ const Header = () => {
                 <span className={styles.cart_count}>5</span>
               </div>
             </div>
+            {/**Header Nav */}
             <div className="hidden md:block md:order-3 h-7 flex-1">
               <nav>
                 <ul className="flex justify-around items-center">
@@ -113,11 +121,11 @@ const Header = () => {
       </div>
       {/** */}
 
-      {/**Searchbar start */}
+      {/**Header bottom start */}
       <div
-        className={`${styles.header_bottom} padding_inside md:hidden flex justify-between items-center`}
+        className={`${styles.header_bottom} padding_inside flex justify-between items-center `}
       >
-        <div className="flex justify-center items-center space-x-2 text-white">
+        <div className="flex justify-center items-center space-x-2 text-white md:hidden">
           <div
             className={`${styles.drp_menu}`}
             onClick={openCategoryMenu}
@@ -125,7 +133,7 @@ const Header = () => {
           <p className="text-xl">Shop by category</p>
         </div>
         <div onClick={openSearchBar}>
-          <div className={`${styles.search_icon} mr-5`}></div>
+          <div className={`${styles.search_icon} mr-5 md:hidden`}></div>
         </div>
       </div>
       {searchTerm && (

@@ -10,7 +10,7 @@ import { MdLockOutline, MdOutlinePeople } from "react-icons/md";
 
 const signup = () => {
   return (
-    <main className="relative mt-44  w-full bg-primary md:flex md:justify-center md:items-center md:p-10">
+    <main className="relative top-36 w-full bg-primary md:flex md:justify-center md:items-center md:p-10">
       <div className="bg-white flex justify-center items-center  w-full text-center md:rounded-2xl md:shadow-2xl md:px-16 md:flex md:w-3/5 md:max-w-4xl">
         {/* Sign up section */}
         <div className="w-full p-5">

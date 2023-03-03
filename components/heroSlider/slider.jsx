@@ -38,58 +38,58 @@ const Slider = () => {
     >
       {/* left section */}
 
-      <div className="scrollable-content border-t-2 border-t-honey bg-primary text-secondary mx-10 w-80 h-auto hidden md:block shadow-xl">
+      <div className="scrollable-content border-t-2 border-t-honey bg-primary text-secondary mx-10 w-80 h-auto hidden md:block shadow-hnx">
         <div className={`${styles.dropdown_content}`}>
           <ul className="grid   text-lg">
-            <li className="space-x-2 py-5 px-9 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="space-x-2 py-5 px-9 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Royal Honey</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Black Bull Honey</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Blue Bull Honey</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Extumas Honey</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">VIP Honey</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Gold Honey</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Leopard Miracle</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Leopard Miracle</a>
               <span>
                 <TiChevronRight className="text-secondary" />
               </span>
             </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm">
+            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
               <a className=" font-semibold">Leopard Miracle</a>
               <span>
                 <TiChevronRight className="text-secondary" />
@@ -129,7 +129,7 @@ const Slider = () => {
               />
 
               <div className={`${styles.slider_content} from-bottom`}>
-                <Button className="bg-secondary text-primary hover:bg-primary hover:text-black">
+                <Button className="bg-secondary text-primary hover:bg-honey hover:text-black">
                   Shop Now
                 </Button>
               </div>
