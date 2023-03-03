@@ -10,7 +10,6 @@ import styles from "../heroSlider/slider.module.css";
 import Button from "../Button";
 import Image from "next/image";
 
-
 const ByMore = () => {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
@@ -33,12 +32,10 @@ const ByMore = () => {
   }, [index]);
 
   return (
-    <section
-      className={`mr-8 mb-20 pt-8 px-8 pb-20 w-full h-full flex justify-between border-solid border border-gray`}
-    >
-      {/* Buymore heroslide section */}
+    <section className=" relative mr-8 mb-12 pt-8 px-4 pb-4 w-2/4 h-full flex justify-between border-solid border border-gray md:w-full md:h-3/4">
+      {/* Buy more slider section */}
 
-      <div className={styles.section_center}>
+      <div className="mb-8 p-8 text-center flex overflow-hidden md:w-2/4 md:h-3/4">
         {people.map((person, personIndex) => {
           const { id, image, name, title, quote } = person;
 
@@ -53,10 +50,7 @@ const ByMore = () => {
             position = "lastSlide";
           }
           return (
-            <article
-              className={`${styles[position]}`}
-              key={id}
-            >
+            <article className={`${styles[position]}`} key={id}>
               <Image
                 src={image}
                 alt={name}
@@ -65,12 +59,14 @@ const ByMore = () => {
                 className={styles.person_img}
               />
               *
-              <div className={`${styles.slider_content} from-bottom`}>
+              <div className="from-bottom absolute left-0 top-4/5 bottom-0 right-0 mx-0 my-auto">
                 <div>
                   <h4>{name}</h4>
-                  <p className={styles.title}>{title}</p>
-                  <p className={styles.text}>{quote}</p>
-                  <Button className="bg-secondary hover:bg-tertiary">
+                  <p className="text-center transform-capitalize font-8 font-semibold text-black mb-4">
+                    {title}
+                  </p>
+                  <p className="mx-0 my-auto line-1 font-600 mb-4">{quote}</p>
+                  <Button className="bg-secondary hover:bg-primary-red mb-4">
                     Add to Cart
                   </Button>
                 </div>
@@ -78,10 +74,13 @@ const ByMore = () => {
             </article>
           );
         })}
-        <button className={styles.prev} onClick={() => setIndex(index - 1)}>
+        <button
+          className="absolute top-2/4 -translate-y-1/2 bg-gray text-black w-10 h-10 grid place-items-center border-transparent font-4 rounded-full cursor-pointer transition-all delay-75 hover:bg-secondary left-0"
+          onClick={() => setIndex(index - 1)}
+        >
           <FiChevronLeft />
         </button>
-        <button className={styles.next} onClick={() => setIndex(index + 1)}>
+        <button className="absolute top-2/4 -translate-y-1/2 bg-gray text-black w-10 h-10 grid place-items-center border-transparent font-4 rounded-full cursor-pointer transition-all delay-75 hover:bg-secondary right-0" onClick={() => setIndex(index + 1)}>
           <FiChevronRight />
         </button>
       </div>
