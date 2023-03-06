@@ -13,6 +13,7 @@ import Favorite from "../favorite";
 import DropdownCategory from "../dropdown-category";
 import CategoryNav from "../category-nav";
 
+
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -104,9 +105,9 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="">
+                    <Link href="/store/store" className="">
                       <span>Store</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link href="/">
