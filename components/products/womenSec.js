@@ -10,7 +10,7 @@ import ByMoreSection from "./buyMore";
 const Women = () => {
   const [product, setProduct] = useState(productData);
   return (
-    <div className="relative top-36 flex flex-col md:flex-row">
+    <div className="relative top-36 md:top-48 flex flex-col md:flex-row">
       <section className="padding_inside md:w-3/5 h-auto">
         <div className="flex flex-col md:flex-row">
           <h2 className="mb-0 ">For Women</h2>

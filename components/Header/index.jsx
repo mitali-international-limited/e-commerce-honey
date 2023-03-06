@@ -8,31 +8,16 @@ import { toggle, favToggle } from "../../Store/slices/globalSlice";
 import styles from "./style.module.css";
 import logo from "../../Assets/logo 1.png";
 import Sidebar from "../Sidebar";
-import Navigation from "../Navigation";
-import Favorite from "../favorite";
-import DropdownCategory from "../dropdown-category";
 import CategoryNav from "../category-nav";
+
+import { FaHome, FaStore, FaSearch } from "react-icons/fa";
+import { BsInfoCircle } from "react-icons/bs";
+import { ImMenu3 } from "react-icons/im";
+import { MdManageAccounts, MdFavorite } from "react-icons/md";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // sticky Header
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.pageYOffset > 0) {
-  //       setSticky(true);
-  //     } else {
-  //       setSticky(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   const dispatch = useDispatch();
 
@@ -67,10 +52,11 @@ const Header = () => {
 
   return (
     <div className={`${styles.header_container}`}>
-      <div className="padding_inside bg-primary h-1/2 md:h-full w-full">
+      {/**header top started */}
+      <div className="padding_inside bg-primary h-1/2 md:h-3/5 w-full">
         <div
           id="myHeader"
-          className="relative grid gap-1 padding_inside items-center "
+          className="padding_inside flex justify-center items-center "
         >
           <div className="flex  justify-between h-full w-full items-center flex-wrap py-3">
             {/**logo */}
@@ -78,40 +64,66 @@ const Header = () => {
               <Image src={logo} cover />
             </div>
             {/**cart */}
-            <div className="md:hidden flex justify-center items-center space-x-5 md:order-4">
-              <div
-                className={`${styles.menu_button} md:hidden`}
-                onClick={handleMenuOnClick}
-              >
-                <span className={`${styles.menu_button}`}></span>
-              </div>
-              <div className={styles.shopping_cart}>
-                <span className={styles.cart_count}>5</span>
+            <div className=" md:order-4 md:mr-3 relative">
+              <div className="flex justify-center items-center space-x-5">
+                <div
+                  className={`${styles.menu_button} md:hidden`}
+                  onClick={handleMenuOnClick}
+                >
+                  <span className={`${styles.menu_button}`}></span>
+                </div>
+                <div className={styles.shopping_cart}>
+                  <span className={styles.cart_count}>5</span>
+                </div>
+                <div className="text-4xl text-secondary hidden md:block">
+                  <MdFavorite />
+                </div>
+                <div className="md:hidden text-xl text-secondary">
+                  <p>0.00$</p>
+                </div>
               </div>
             </div>
             {/**Header Nav */}
-            <div className="hidden md:block md:order-3 h-7 flex-1">
+            <div className="hidden md:block md:order-3 h-7 w-1/3">
               <nav>
-                <ul className="flex justify-around items-center">
+                <ul className="flex justify-between items-center text-secondary">
                   <li>
-                    <a href="/" className="">
+                    <a
+                      href="/"
+                      className="flex flex-col justify-center items-center text-secondary"
+                    >
+                      <span>
+                        <FaHome />
+                      </span>
                       <span>Home</span>
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="">
+                    <a
+                      href="/"
+                      className="flex flex-col justify-center items-center text-secondary"
+                    >
+                      <BsInfoCircle />
                       <span>About</span>
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="">
+                    <a
+                      href="/"
+                      className="flex flex-col justify-center items-center text-secondary"
+                    >
+                      <FaStore />
                       <span>Store</span>
                     </a>
                   </li>
                   <li>
-                    <Link href="/">
-                      <span>Product</span>
-                    </Link>
+                    <a
+                      href="/"
+                      className="flex flex-col justify-center items-center text-secondary"
+                    >
+                      <FaStore />
+                      <span>Products</span>
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -119,34 +131,78 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/** */}
+      {/**Header to end */}
 
       {/**Header bottom start */}
-      <div
-        className={`${styles.header_bottom} padding_inside flex justify-between items-center `}
-      >
-        <div className="flex justify-center items-center space-x-2 text-white md:hidden">
-          <div
-            className={`${styles.drp_menu}`}
-            onClick={openCategoryMenu}
-          ></div>
-          <p className="text-xl">Shop by category</p>
-        </div>
-        <div onClick={openSearchBar}>
-          <div className={`${styles.search_icon} mr-5 md:hidden`}></div>
-        </div>
-      </div>
-      {searchTerm && (
-        <form className=" bg-primary h-16">
-          <input
-            type="text"
-            placeholder={`What are you looking for today ...`}
-            className="shadow-md appearance-none bg-white  text-base pl-10 py-4 pr-12 w-full focus:outline-none"
-            onChange={handleChange}
-          />
-        </form>
-      )}
+      <div className={`${styles.header_bottom}`}>
+        <div
+          className={`w-full padding_inside flex justify-between items-center h-full`}
+        >
+          <div className="flex justify-center items-center space-x-2 text-white md:hidden">
+            <div
+              className={`${styles.drp_menu}`}
+              onClick={openCategoryMenu}
+            ></div>
+            <p className="text-xl">Shop by category</p>
+          </div>
+          <div onClick={openSearchBar} className="md:hidden">
+            <div className={`${styles.search_icon} mr-5`}></div>
+          </div>
+          <div className="w-full hidden md:flex h-full">
+            <div className="w-1/5 h-full flex justify-center items-center mr-3 all-department">
+              <p className="flex capitalize text-center font-bold text-white text-opacity-100 drop-shadow-xl">
+                <span className="px-3">
+                  <ImMenu3 />
+                </span>
+                All Department
+              </p>
+            </div>
 
+            <div class="flex-1 relative">
+              <form class="absolute inset-0 flex items-center justify-center ">
+                <span className="absolute right-8 text-secondary cursor-pointer">
+                  <FaSearch />
+                </span>
+                <input
+                  type="text"
+                  placeholder="What are you looking for today ..."
+                  class="shadow-md appearance-none bg-white text-base pl-10 py-4 pr-12 w-full focus:outline-none rounded-full"
+                  onChange={handleChange}
+                />
+              </form>
+            </div>
+            <div className="w-1/5 flex justify-center space-x-5 items-center text-white text-4xl">
+              <div>
+                <Link
+                  href={{
+                    pathname: "/auth/signin",
+                  }}
+                  className=""
+                >
+                  <MdManageAccounts />
+                </Link>
+              </div>
+
+              <div className="hidden md:block text-xl ">
+                <p>0.00$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {searchTerm && (
+          <form className="md:hidden bg-primary h-16 w-full top-36 md:top-48 left-0 absolute">
+            <input
+              type="text"
+              placeholder={`What are you looking for today ...`}
+              className="shadow-md appearance-none bg-white  text-base pl-10 py-4 pr-12 w-full focus:outline-none"
+              onChange={handleChange}
+            />
+          </form>
+        )}
+      </div>
+
+      {/**header end */}
+      {/**hader dropdown start */}
       <div
         className={`${styles.dropdownMenu} ${
           isMenuOpen ? `${styles.open}` : ""
@@ -154,6 +210,7 @@ const Header = () => {
       >
         <CategoryNav />
       </div>
+      {/**Header dropdown end */}
       <Sidebar />
     </div>
   );
