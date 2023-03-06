@@ -1,7 +1,7 @@
 const categories = [
   {
     id: 1,
-    image: "/Category/male-enhancement.jpg",
+    image: "/Category/MaleEnhancement (1).jpeg",
     name: "Male Enhancement",
   },
   {
@@ -11,7 +11,7 @@ const categories = [
   },
   {
     id: 3,
-    image: "/Category/Gold Honey(7).jpeg",
+    image: "/Category/VIPHoney.jpeg",
     name: "VIP Honey",
   },
   {

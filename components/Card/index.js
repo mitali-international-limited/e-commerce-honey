@@ -14,22 +14,26 @@ const Card = (props) => {
     <>
       {cardType === "category" ? (
         <div
-          className={`${styles.card} my-2 cursor-pointer transition-all shadow  hover:shadow-2xl py-10`}
+          className={`${styles.card} my-2 cursor-pointer transition-all shadow-hnx  hover:shadow-2xl py-10`}
         >
           <a className="block">
             <div className="relative w-full" style={{ paddingTop: "75%" }}>
-              <Image src={image} alt={name} fill objectFit="cover" />
-            </div>
-            <div className="pt-5 text-center">
-              <p className="text-lg font-semibold">{name}</p>
+              <Image src={image} alt={name} fill objectFit="contain" />
             </div>
           </a>
+          <div className="pt-5 text-center">
+            <p className="text-lg font-semibold">{name}</p>
+          </div>
         </div>
       ) : (
         <div className="h-300 w-200">
           <div className="relative h-300 w-200 p-5 rounded transition-all cursor-pointer">
             <div
+
               className="relative w-full transition-all transform hover:scale-125"
+
+              className="relative w-full transition-all hover:scale-125"
+
               style={{ paddingTop: "75%" }}
             >
               <Image src={image} alt={name} fill objectFit="cover" />
