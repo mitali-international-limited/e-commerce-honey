@@ -52,7 +52,7 @@ const Women = () => {
         </div>
       </section>
       <div className="md:w-2/5">
-        <h2 className="ml-2 shadow-sm">Buy More Save More</h2>
+        <h2 className="ml-2 pt-2">Buy More Save More</h2>
         <ByMoreSection />
       </div>
     </div>
