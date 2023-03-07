@@ -48,7 +48,7 @@ const Card = (props) => {
 
                 {/* ratting section  */}
               </div>
-              <p className="flex justify-between items-center px-5 pb-2">
+              <p className="flex justify-between items-center px-8 pb-2">
                 <strong className="bg-primary inline-block font-semibold line-through">
                   $330
                 </strong>
