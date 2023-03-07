@@ -10,10 +10,12 @@ import logo from "../../Assets/logo 1.png";
 import Sidebar from "../Sidebar";
 import CategoryNav from "../category-nav";
 
+
 import { FaHome, FaStore, FaSearch } from "react-icons/fa";
 import { BsInfoCircle } from "react-icons/bs";
 import { ImMenu3 } from "react-icons/im";
 import { MdManageAccounts, MdFavorite } from "react-icons/md";
+
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState(false);
@@ -108,13 +110,17 @@ const Header = () => {
                     </a>
                   </li>
                   <li>
+
+                    <Link href="/store/store" className="">
+
                     <a
                       href="/"
                       className="flex flex-col justify-center items-center text-secondary"
                     >
                       <FaStore />
+
                       <span>Store</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a

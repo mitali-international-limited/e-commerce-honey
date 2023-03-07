@@ -6,10 +6,6 @@ import Image from "next/image";
 import ReviewStar from "../Star";
 import OfferPercent from "../offer";
 
-// import getConfig from "next/config";
-
-// const { publicRuntimeConfig } = getConfig();
-// const imagesPath = publicRuntimeConfig.IMAGES_PATH;
 const Card = (props) => {
   const { id, name, image, cardType, quote, quantity, price, percentage } =
     props;
@@ -33,7 +29,11 @@ const Card = (props) => {
         <div className="h-300 w-200">
           <div className="relative h-300 w-200 p-5 rounded  cursor-pointer">
             <div
+
+              className="relative w-full transition-all transform hover:scale-125"
+
               className="relative w-full transition-all hover:scale-125"
+
               style={{ paddingTop: "75%" }}
             >
               <Image src={image} alt={name} fill objectFit="cover" />
@@ -52,7 +52,7 @@ const Card = (props) => {
 
                 {/* ratting section  */}
               </div>
-              <p className="flex flex-col md:flex-row justify-around items-center px-3 pb-2">
+              <p className="flex justify-between items-center px-5 pb-2">
                 <strong className="bg-primary inline-block font-semibold line-through">
                   $330
                 </strong>
@@ -65,8 +65,13 @@ const Card = (props) => {
               <div className="flex justify-center">
                 <ReviewStar />
               </div>
-              <div className="text-center pt-5 underline text-tertiary">
+              {/* <div className="text-center pt-5 underline text-tertiary">
                 View
+              </div> */}
+              <div className={`${styles.slider_content} flex justify-center`}>
+                <Button className="bg-secondary text-primary hover:bg-honey hover:text-black">
+                  Shop Now
+                </Button>
               </div>
             </div>
           </div>

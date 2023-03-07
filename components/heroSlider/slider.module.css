@@ -13,6 +13,7 @@
   display: flex;
   overflow: hidden;
 }
+
 @media screen and (min-width: 778px) {
   .section_slider {
     height: 80vh;
@@ -85,3 +86,15 @@ article.nextSlide {
 .next {
   right: 0;
 }
+
+
+@media screen and (min-width: 778px) {
+  .section_slider {
+    height: 80vh;
+  }
+  .section_center {
+    width: 100%;
+  }
+}
+=======
+
