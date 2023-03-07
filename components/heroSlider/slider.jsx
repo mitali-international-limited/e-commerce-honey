@@ -123,7 +123,7 @@ const Slider = () => {
                   src={image}
                   alt={name}
                   fill
-                  responsive
+                  cover
                   className={styles.person_img}
                 />
 

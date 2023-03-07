@@ -1,5 +1,7 @@
 .card {
-  width: 90%;
+  width: 16rem;
+  height: 20rem;
+  position: relative;
   padding: 5px;
 }
 .percentage {

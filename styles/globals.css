@@ -152,6 +152,19 @@ img {
 .scrollable-content::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+
+.x-scrollable-content {
+  overflow-y: scroll;
+}
+.x-scrollable-content::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+.x-scrollable-content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
 ul li a:hover,
 ul li a:focus,
 ul li a:active {

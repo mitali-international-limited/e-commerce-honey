@@ -14,15 +14,15 @@ const Card = (props) => {
     <>
       {cardType === "category" ? (
         <div
-          className={`${styles.card} my-2 cursor-pointer transition-all shadow-hnx  hover:shadow-2xl py-10`}
+          className={`${styles.card} my-2 cursor-pointer transition-all shadow-hnx  `}
         >
-          <a className="block">
-            <div className="relative w-full" style={{ paddingTop: "75%" }}>
-              <Image src={image} alt={name} fill objectFit="contain" />
+          <a className="w-full h-full">
+            <div className="relative w-full h-3/4 transition-all duration-500 hover:scale-110">
+              <Image src={image} alt={name} fill cover />
             </div>
           </a>
           <div className="pt-5 text-center">
-            <p className="text-lg font-semibold">{name}</p>
+            <p className="text-xl font-semibold">{name}</p>
           </div>
         </div>
       ) : (
