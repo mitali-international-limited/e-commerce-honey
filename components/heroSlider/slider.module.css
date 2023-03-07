@@ -87,7 +87,6 @@ article.nextSlide {
   right: 0;
 }
 
-
 @media screen and (min-width: 778px) {
   .section_slider {
     height: 80vh;
@@ -96,5 +95,3 @@ article.nextSlide {
     width: 100%;
   }
 }
-=======
-
