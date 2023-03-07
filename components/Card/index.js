@@ -29,11 +29,7 @@ const Card = (props) => {
         <div className="h-300 w-200">
           <div className="relative h-300 w-200 p-5 rounded  cursor-pointer">
             <div
-
               className="relative w-full transition-all transform hover:scale-125"
-
-              className="relative w-full transition-all hover:scale-125"
-
               style={{ paddingTop: "75%" }}
             >
               <Image src={image} alt={name} fill objectFit="cover" />
