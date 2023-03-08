@@ -180,3 +180,7 @@ ul li a:active {
 .all-department {
   background-color: rgba(250, 243, 237, 0.2);
 }
+
+.higherPriority{
+  z-index: 10000;
+}
