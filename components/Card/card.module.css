@@ -3,6 +3,7 @@
   height: 20rem;
   position: relative;
   padding: 5px;
+  border-radius: 1rem;
 }
 .percentage {
   position: absolute;

@@ -8,16 +8,12 @@ import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import styles from "./style.module.css";
 const Categories = () => {
   const [category, setCategory] = useState(categoryData);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const cardBoxRef = useRef(null);
-
-  useEffect(() => {
-    console.log(cardBoxRef.current.scrollLeft);
-  }, []);
 
   const handlePreviousCategory = (e) => {
     let width = cardBoxRef.current.clientWidth;
     cardBoxRef.current.scrollLeft -= width;
-    console.log((cardBoxRef.current.scrollLeft -= width));
   };
 
   const handleNextCategory = (e) => {
@@ -25,12 +21,30 @@ const Categories = () => {
     cardBoxRef.current.scrollLeft += width;
   };
 
+  useEffect(() => {
+    console.log(category.length - 1);
+    console.log(category.length);
+    console.log(currentIndex);
+
+    const intervalId = setInterval(() => {
+      if (currentIndex < category.length - 1) {
+        setCurrentIndex(currentIndex + 2);
+        handleNextCategory();
+      } else {
+        setCurrentIndex(0);
+        handlePreviousCategory();
+      }
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [currentIndex]);
+
   return (
     <section className={`padding_inside relative top-36 md:top-48 `}>
       <h2 className="mb-0">Top Categories</h2>
       <hr className="h-px my-5 bg-gray border-0 dark:bg-gray" />
       <div
-        className="flex items-center gap-3 justify-between p-6 scroll-smooth x-scrollable-content"
+        className="flex items-center gap-3 justify-between p-6 scroll-smooth x-scrollable-content rounded-md"
         ref={cardBoxRef}
       >
         {category.map((item, index) => {
