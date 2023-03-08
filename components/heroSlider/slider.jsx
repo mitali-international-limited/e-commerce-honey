@@ -35,7 +35,7 @@ const Slider = () => {
   return (
     <section className={`w-full relative`}>
       <div
-        className={`${styles.section_slider} flex justify-center space-x-5 padding_inside`}
+        className={`${styles.section_slider} flex justify-center space-x-5 md:padding_inside`}
       >
         {/* left section */}
 
@@ -144,7 +144,6 @@ const Slider = () => {
         </div>
 
         {/* right section */}
-        <div className="hidden md:block w-1/5"></div>
       </div>
     </section>
   );

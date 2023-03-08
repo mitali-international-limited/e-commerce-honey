@@ -3,7 +3,7 @@ const people = [
     id: 1,
     image: "/Products/Black Bull/Black Bull(1).jpeg",
 
-    name: "Black Bull",
+    name: "Blue Bull Honey 22g Pouches",
     category: "Male enhancement Supplement",
     quote: "Don't Quit ... ",
     quantity: "10 pcs",
@@ -12,7 +12,7 @@ const people = [
   {
     id: 2,
     image: "/Products/Blue Bull/Blue Bull.jpeg",
-    name: "Blue Bull",
+    name: "Black Bull Honey 22g Pouches",
     category: "Male enhancement Supplement",
     quote: "Extra strength",
     quantity: "15 pcs",
@@ -21,7 +21,7 @@ const people = [
   {
     id: 3,
     image: "/Products/Gold Honey/Gold Honey(4).jpeg",
-    name: "Etumax Honey",
+    name: "Etumax Honey 22g Pouches",
     category: "VIP Royal Honey",
     quote: "Honey for Extra Energy",
     quantity: "10pcs",
@@ -30,7 +30,7 @@ const people = [
   {
     id: 4,
     image: "/Products/Leoard Honey/Leopard Honey.jpg",
-    name: "Leopard Honey",
+    name: "Vitamax Double Shot 20g Sachet",
     category: "Dietary Supplement",
     quote: "Discover the potential",
     quantity: "10 pcs",
@@ -39,7 +39,7 @@ const people = [
   {
     id: 5,
     image: "/Products/Leoard Honey/Leopard Honey.jpg",
-    name: "Leopard Honey",
+    name: "Leopard Miracle Honey 15g Sachet",
     category: "Dietary Supplement",
     quote: "Discover the potential",
     quantity: "10 pcs",
@@ -48,7 +48,7 @@ const people = [
   {
     id: 6,
     image: "/Products/Leoard Honey/Leopard Honey.jpg",
-    name: "Leopard Honey",
+    name: "Leopard Miracle Honey 22g Pouches",
     category: "Dietary Supplement",
     quote: "Discover the potential",
     quantity: "10 pcs",
@@ -57,7 +57,7 @@ const people = [
   {
     id: 7,
     image: "/Products/Leoard Honey/Leopard Honey.jpg",
-    name: "Leopard Honey",
+    name: "Royal Honey VIP 20g Sachet",
     category: "Dietary Supplement",
     quote: "Discover the potential",
     quantity: "10 pcs",
