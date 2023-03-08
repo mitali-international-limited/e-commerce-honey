@@ -1,10 +1,12 @@
 import React from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { AiFillHeart } from "react-icons/ai";
 import Button from "../Button";
+import ReviewStar from "../Star/index";
 
 const ProductCatalog = () => {
   return (
-    <section className="relative text-gray-600 overflow-hidden">
+    <section className="relative overflow-hidden top-10">
       <div className="container m-auto padding_inside">
         <div className="lg:w-4/5 flex flex-wrap">
           <img
@@ -18,68 +20,15 @@ const ProductCatalog = () => {
             </h1>
             <div className="flex mb-4">
               <span className="flex items-center">
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  className="w-4 h-4 text-indigo-500"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-                <span className="text-gray-600 ml-3">4 Reviews</span>
+                <ReviewStar />
+                {/* <span className="text-gray-600 ml-3">4 Reviews</span> */}
               </span>
             </div>
             <div className="">
               <h2 className="text-lg title-font tracking-widest">
                 Category:
                 <span className="text-bold text-secondary">
+                  {" "}
                   Male Enhancement
                 </span>
               </h2>
@@ -110,13 +59,18 @@ const ProductCatalog = () => {
               </span>
 
               <Button className="w text-2xl font-bold flex justify-center items-center bg-primary">
-                <span className="hover:text-3xl">-</span>
+                <span className="hover:text-3xl hover:text-secondary hover:rounded-full hover:bg-gray">
+                  -
+                </span>
                 <span className="mx-8 my-2"> 5 </span>
-                <span>+</span>
+                <span className="hover:text-secondary hover:rounded-full hover:bg-gray">
+                  +
+                </span>
               </Button>
             </div>
             <div className="flex justify-between items-center mt-6">
               <Button className="flex space-x-1 items-center text-secondary border rounded border-secondary">
+                {/* <AiFillHeart/> */}
                 <svg
                   fill="currentColor"
                   stroke-linecap="round"

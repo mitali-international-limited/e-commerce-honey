@@ -3,15 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggle, favToggle } from "../../Store/slices/globalSlice";
+import { toggle, favToggle, cartToggle } from "../../Store/slices/globalSlice";
 
 import styles from "./style.module.css";
 import logo from "../../Assets/logo 1.png";
 import Sidebar from "../Sidebar";
 import CategoryNav from "../category-nav";
+import CartNav from "../cart";
 
 import { FaHome, FaStore, FaSearch } from "react-icons/fa";
-import { BsInfoCircle } from "react-icons/bs";
+import { BsInfoCircle, BsCart4 } from "react-icons/bs";
 import { ImMenu3 } from "react-icons/im";
 import { MdManageAccounts, MdFavorite } from "react-icons/md";
 
@@ -50,6 +51,11 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleCart = (e) => {
+    e.preventDefault();
+    dispatch(cartToggle());
+  };
+
   return (
     <div className={`${styles.header_container}`}>
       {/**header top started */}
@@ -72,9 +78,20 @@ const Header = () => {
                 >
                   <span className={`${styles.menu_button}`}></span>
                 </div>
-                <div className={styles.shopping_cart}>
-                  <span className={styles.cart_count}>5</span>
+                {/* cart section  */}
+                <div className="relative">
+                  <div className={styles.shopping_cart}>
+                    <div
+                      className="mt-4 ml-1 text-3xl text-secondary"
+                      onClick={handleCart}
+                    >
+                      <BsCart4 />
+                      <span className={styles.cart_count}>5</span>
+                    </div>
+                  </div>
+                  {/* <CartNav/> */}
                 </div>
+
                 <div className="text-4xl text-secondary hidden md:block">
                   <MdFavorite />
                 </div>
@@ -213,6 +230,7 @@ const Header = () => {
       </div>
       {/**Header dropdown end */}
       <Sidebar />
+      <CartNav />
     </div>
   );
 };
