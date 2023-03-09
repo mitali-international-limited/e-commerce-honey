@@ -180,12 +180,38 @@ ul li a:active {
 .all-department {
   background-color: rgba(250, 243, 237, 0.2);
 }
+
+
+.higherPriority{
+  z-index: 10000;
+}
+
 .hover-scale-delay {
   transition-delay: 0.3s;
 }
 .hover-scale-delay:hover .hover-scale {
   transform: scale(1.1);
 }
+
+
+.heightFull{
+  height: 90vh;
+}
+
+@media screen and (min-width: 768px) {
+  .heightFull {
+    height: 100vh;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .leftHight {
+    height: 80vh;
+  }
+}
+
 .active {
   @apply text-honey underline;
 }
+

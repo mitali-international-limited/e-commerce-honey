@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
-import { FaQuoteRight } from "react-icons/fa";
-import { TiChevronRight } from "react-icons/ti";
 import Link from "next/link";
 
 import data from "../../utils/data-demo";
 import Button from "../Button";
+import LeftSection from "./leftSection"
 
 import Image from "next/image";
 
@@ -38,64 +37,9 @@ const Slider = () => {
         className={`${styles.section_slider} flex justify-center md:space-x-5 md:padding_inside`}
       >
         {/* left section */}
+        <div className="w-1/5 hidden md:block">
 
-        <div className="scrollable-content mr-3 border-t-2 border-t-honey bg-primary text-secondary w-1/5 h-auto hidden md:block shadow-hnx">
-          <ul className={`${styles.dropdown_content} text-lg`}>
-            <li className="space-x-2 py-5 px-9 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Royal Honey</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Black Bull Honey</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Blue Bull Honey</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Extumas Honey</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">VIP Honey</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Gold Honey</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Leopard Miracle</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Leopard Miracle</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-            <li className="py-5 px-9 space-x-2 flex justify-between items-center cursor-pointer hover:bg-white shadow-sm hover:shadow-hnx">
-              <a className=" font-semibold">Leopard Miracle</a>
-              <span>
-                <TiChevronRight className="text-secondary" />
-              </span>
-            </li>
-          </ul>
+          <LeftSection/>
         </div>
 
         {/* middle heroslide section */}

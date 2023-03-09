@@ -3,21 +3,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggle, favToggle } from "../../Store/slices/globalSlice";
+import { toggle, favToggle, cartToggle, allDepartmentToggle } from "../../Store/slices/globalSlice";
 
 import styles from "./style.module.css";
 import logo from "../../Assets/logo 1.png";
 import Sidebar from "../Sidebar";
 import CategoryNav from "../category-nav";
+import AllDepartNav from "../all-department-nav";
+import CartNav from "../cart";
 
 import { FaHome, FaStore, FaSearch } from "react-icons/fa";
-import { BsInfoCircle } from "react-icons/bs";
+import { BsInfoCircle, BsCart4 } from "react-icons/bs";
 import { ImMenu3 } from "react-icons/im";
 import { MdManageAccounts, MdFavorite } from "react-icons/md";
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDepartmentOpen, setIsDepartmentOpen] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -49,6 +52,15 @@ const Header = () => {
     e.preventDefault();
     setIsMenuOpen(!isMenuOpen);
   };
+  const openDepartment = (e) => {
+    e.preventDefault();
+    dispatch(allDepartmentToggle());
+  };
+
+  const handleCart = (e) => {
+    e.preventDefault();
+    dispatch(cartToggle());
+  };
 
   return (
     <div className={`${styles.header_container}`}>
@@ -72,9 +84,20 @@ const Header = () => {
                 >
                   <span className={`${styles.menu_button}`}></span>
                 </div>
-                <div className={styles.shopping_cart}>
-                  <span className={styles.cart_count}>5</span>
+                {/* cart section  */}
+                <div className="relative">
+                  <div className={styles.shopping_cart}>
+                    <div
+                      className="mt-4 ml-1 text-3xl text-secondary"
+                      onClick={handleCart}
+                    >
+                      <BsCart4 />
+                      <span className={styles.cart_count}>5</span>
+                    </div>
+                  </div>
+                  {/* <CartNav/> */}
                 </div>
+
                 <div className="text-4xl text-secondary hidden md:block">
                   <MdFavorite />
                 </div>
@@ -146,12 +169,16 @@ const Header = () => {
             ></div>
             <p className="text-xl">Shop by category</p>
           </div>
+
           <div onClick={openSearchBar} className="md:hidden">
             <div className={`${styles.search_icon} mr-5`}></div>
           </div>
           <div className="w-full hidden md:flex h-full">
-            <div className="w-1/5 h-full flex justify-center items-center mr-3 all-department">
-              <p className="flex capitalize text-center font-bold text-white text-opacity-100 drop-shadow-xl">
+            <div
+              className={` w-1/5 h-full flex justify-center items-center mr-3 all-department`}
+              onClick={openDepartment}
+            >
+              <p className="flex capitalize text-center font-bold text-white text-opacity-100 drop-shadow-xl cursor-pointer">
                 <span className="px-3">
                   <ImMenu3 />
                 </span>
@@ -211,8 +238,11 @@ const Header = () => {
       >
         <CategoryNav />
       </div>
+      
       {/**Header dropdown end */}
       <Sidebar />
+      <AllDepartNav />
+      <CartNav />
     </div>
   );
 };

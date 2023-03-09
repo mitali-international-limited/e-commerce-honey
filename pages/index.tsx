@@ -10,6 +10,7 @@ import Gallery from "../components/gallery";
 import RecommandForYou from "../components/RecommandForYou";
 import StoreProduct from "../components/storeProduct";
 
+
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
