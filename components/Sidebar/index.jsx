@@ -50,7 +50,6 @@ const Sidebar = () => {
       </nav>
       <hr className="text-secondary font-bold" />
       <CategoryNav />
-      {/* <CartNav/> */}
     </div>
   );
 };

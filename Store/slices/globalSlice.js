@@ -7,6 +7,7 @@ const initialState = {
   isSticky: false,
   isModalOpen: false,
   isCartOpen: false,
+  isDepartmentOpen: false,
 };
 
 export const sidebarSlice = createSlice({
@@ -25,8 +26,11 @@ export const sidebarSlice = createSlice({
     cartToggle: (state) => {
       state.isCartOpen = !state.isCartOpen;
     },
+    allDepartmentToggle: (state) => {
+      state.isDepartmentOpen = !state.isDepartmentOpen;
+    },
   },
 });
-export const { toggle, stickyPosition, favToggle, cartToggle } = sidebarSlice.actions;
+export const { toggle, stickyPosition, favToggle, cartToggle, allDepartmentToggle } = sidebarSlice.actions;
 
 export default sidebarSlice.reducer;

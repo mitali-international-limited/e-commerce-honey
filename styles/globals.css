@@ -193,3 +193,19 @@ ul li a:active {
   transform: scale(1.1);
 }
 
+.heightFull{
+  height: 90vh;
+}
+
+@media screen and (min-width: 768px) {
+  .heightFull {
+    height: 100vh;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .leftHight {
+    height: 80vh;
+  }
+}

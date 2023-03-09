@@ -1,41 +1,48 @@
 import React from "react";
-import {useRef} from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {AiOutlineClose, AiOutlineCloseCircle} from "react-icons/ai";
-// import {BsCart4} from "react-icons/bs";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
-import {cartToggle } from "../../Store/slices/globalSlice";
+import { cartToggle } from "../../Store/slices/globalSlice";
+import CheckOut from "./checkOut";
 
 // import styles from "./category-nav.module.css";
 
 const CartNav = () => {
   const { isCartOpen } = useSelector((state) => state.sidebar);
   const dispatch = useDispatch();
- const closeCart = () =>{
- dispatch (cartToggle())
- }
+  const closeCart = () => {
+    dispatch(cartToggle());
+  };
   // console.log(isCartOpen);
   return (
-    <>
-{
-  isCartOpen && (
+    <div>
+      {isCartOpen && (
+        <div className="heightFull w-96 bg-primary higherPriority absolute top-0 right-0 flex justify-center">
+          <div className="top-8">
+            <span
+              onClick={closeCart}
+              className="absolute right-4 flex top-2 text-secondary cursor-pointer text-3xl ml-2 font-bold hover:text-primary-red"
+            >
+              <AiOutlineCloseCircle className="mr-4 mt-1" />
+            </span>
+            <p className="text-3xl text-center mt-16 text-secondary ">
+              Shopping Cart
+            </p>
+            <hr className="h-px my-4 bg-secondary border-0 dark:bg-secondary" />
+          </div>
+          
+          <div>
+            <CheckOut/>
+          </div>
 
-    <div className="h-96 w-96 bg-gray higherPriority absolute top-0 right-5">
-    <div className="top-8">
-    <p className="pt-2 ml-2 text-2xl">Shopping Cart</p>
-    <span onClick={closeCart} className="absolute flex top-2 right-2 cursor-pointer text-2xl mr-2 hover:text-white"><AiOutlineCloseCircle className="mr-1 mt-1"/></span>
+          <div className=" bottom-10  cursor-pointer absolute place-items-center">
+            <button class="text-white bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-honey rounded text-2xl text-center">
+              Go to Checkout
+            </button>
+          </div>
+        </div>
+      )}
     </div>
-    <ol>
-      <li>
-      <span className="w-2/3 bg-honey">Honey</span>
-      <span className="w-1/3 bg-gray"> 5</span>
-      </li>
-    </ol>
-      
-    </div>
-  )
-}
-    </>
   );
 };
 
