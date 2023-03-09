@@ -154,7 +154,7 @@ img {
 }
 
 .x-scrollable-content {
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
 .x-scrollable-content::-webkit-scrollbar {
   width: 0px;
@@ -185,4 +185,7 @@ ul li a:active {
 }
 .hover-scale-delay:hover .hover-scale {
   transform: scale(1.1);
+}
+.active {
+  @apply text-honey underline;
 }

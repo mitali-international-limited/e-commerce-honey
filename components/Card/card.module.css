@@ -10,3 +10,15 @@
   top: 10px;
   right: 5px;
 }
+.productCard {
+  min-width: 15rem;
+  position: relative;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 992px) {
+  .productCard {
+    min-width: 23rem;
+    position: relative;
+    border-radius: 1rem;
+  }
+}

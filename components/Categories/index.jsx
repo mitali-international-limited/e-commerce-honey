@@ -11,6 +11,9 @@ const Categories = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardBoxRef = useRef(null);
 
+  // console.log(window.screen);
+  // console.log("children: ", cardBoxRef.current.scrollLeft);
+
   const handlePreviousCategory = (e) => {
     let width = cardBoxRef.current.clientWidth;
     cardBoxRef.current.scrollLeft -= width;
@@ -22,17 +25,15 @@ const Categories = () => {
   };
 
   useEffect(() => {
-    console.log(category.length - 1);
-    console.log(category.length);
-    console.log(currentIndex);
-
     const intervalId = setInterval(() => {
-      if (currentIndex < category.length - 1) {
-        setCurrentIndex(currentIndex + 2);
+      if (currentIndex < category.length - 3) {
+        setCurrentIndex(currentIndex + 1);
         handleNextCategory();
+
+        // if(){}
       } else {
         setCurrentIndex(0);
-        handlePreviousCategory();
+        cardBoxRef.current.scrollLeft = 0;
       }
     }, 5000);
 
@@ -41,7 +42,7 @@ const Categories = () => {
 
   return (
     <section className={`padding_inside relative top-36 md:top-48 `}>
-      <h2 className="mb-0">Top Categories</h2>
+      <h2 className="">Top Categories</h2>
       <hr className="h-px my-5 bg-gray border-0 dark:bg-gray" />
       <div
         className="flex items-center gap-3 justify-between p-6 scroll-smooth x-scrollable-content rounded-md"

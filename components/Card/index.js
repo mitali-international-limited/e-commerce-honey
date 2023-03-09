@@ -15,7 +15,6 @@ const Card = (props) => {
   const handleAnimation = (e) => {
     const divElement = document.querySelectorAll(`.${styles.card}`);
     // const imageElement = divElement.querySelector("img");
-    console.log("div", divElement);
 
     // if (e.type === "mouseenter") {
     //   // code to execute when mouse enters
@@ -48,7 +47,9 @@ const Card = (props) => {
           </div>
         </div>
       ) : (
-        <div className="relative border-1 shadow-hnx hover:scale-105 transition-all duration-300 bg-white">
+        <div
+          className={`${styles.productCard} shadow-hnx hover:scale-105 transition-all duration-300 bg-white`}
+        >
           <div className="rounded  cursor-pointer w-full h-full">
             <div className="w-full h-56 flex flex-col relative">
               <div className="relative w-full h-full transition-all duration-500 hover:scale-110 rounded-md hover:skew-x-2 overflow-hidden">
@@ -103,8 +104,8 @@ const Card = (props) => {
               {/* <div className="text-center pt-5 underline text-tertiary">
                 View
               </div> */}
-              <div className="flex justify-between items-center">
-                <Button className="bg-primary text-black hover:bg-honey hover:text-black text-lg shadow-md">
+              <div className="w-full">
+                <Button className="w-full bg-primary text-black hover:bg-honey hover:text-black text-lg shadow-md">
                   Shop Now
                 </Button>
               </div>
