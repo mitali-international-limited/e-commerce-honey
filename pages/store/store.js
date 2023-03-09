@@ -15,9 +15,8 @@ import NewArrivals from "./newArrivals/index";
 import TopRankings from "./topRanking/index";
 import WeeklyDeals from "./weeklyDeals/index";
 import TopProducts from "./topProduct/index";
-import HotProducts from "./hotProduct/index";
+import RecommendProduct from "../../components/RecommandForYou";
 import WomenProducts from "./womenProduct/index";
-
 
 import Image from "next/image";
 
@@ -100,15 +99,15 @@ const Slider = () => {
           <WeeklyDeals />
         </div>
         <div className="bg-white rounded-xl">
-          <HotProducts />
+          <RecommendProduct />
         </div>
         <div className="bg-white rounded-xl">
           <WomenProducts />
         </div>
       </div>
       <div className="grid grid-cols-1 m-5 gap-4 justify-between md:grid-cols-1 sm:grid-cols-1 relative top-36">
-          <TopProducts />
-        </div>
+        <TopProducts />
+      </div>
     </div>
   );
 };

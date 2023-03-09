@@ -6,7 +6,6 @@ import styles from "./style.module.css";
 
 const Favorite = () => {
   const { isModalOpen } = useSelector((state) => state.sidebar);
-  console.log(isModalOpen);
   return (
     <>
       {isModalOpen && (

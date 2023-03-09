@@ -7,7 +7,7 @@ import Categories from "../components/Categories";
 import Products from "../components/products";
 import Women from "../components/products/womenSec";
 import Gallery from "../components/gallery";
-import ProductSection from "../components/HotProduct";
+import RecommandForYou from "../components/RecommandForYou";
 import StoreProduct from "../components/storeProduct";
 
 
@@ -26,7 +26,7 @@ export default function Home() {
         <ImageSlider />
         <Categories />
         <Products />
-        <ProductSection />
+        <RecommandForYou />
         <Women />
         <Gallery />
       </main>
