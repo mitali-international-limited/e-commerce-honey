@@ -3,6 +3,7 @@
   height: 40vh;
   position: relative;
   top: 9rem;
+  transition: all 0.3s ease-in-out;
 }
 .section_center {
   margin: 0 auto;
