@@ -181,9 +181,8 @@ ul li a:active {
   background-color: rgba(250, 243, 237, 0.2);
 }
 
-
-.higherPriority{
-  z-index: 10000;
+.higherPriority {
+  z-index: 1000;
 }
 
 .hover-scale-delay {
@@ -193,15 +192,13 @@ ul li a:active {
   transform: scale(1.1);
 }
 
-
-.heightFull{
+.heightFull {
   height: 90vh;
 }
 
 @media screen and (min-width: 768px) {
   .heightFull {
     height: 100vh;
-
   }
 }
 
@@ -214,4 +211,3 @@ ul li a:active {
 .active {
   @apply text-honey underline;
 }
-

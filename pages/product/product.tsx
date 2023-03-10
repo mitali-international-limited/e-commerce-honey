@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import RelProduct from "../components/Card";
-import RelProductData from "../utils/products-demo";
-import ProductCatalog from "../components/product-catalog";
+import RelProduct from "../../components/Card";
+import RelProductData from "../../utils/products-demo";
+import ProductCatalog from "../../components/product-catalog";
+import ProductButton from "../../components/product-button";
 
 const product = () => {
   const [product, setProduct] = useState(RelProductData);
@@ -35,7 +36,7 @@ const product = () => {
 
         {/* Related Product Section */}
 
-        <section className="padding_inside m-auto">
+        {/* <section className="padding_inside m-auto">
           <h2 className="mb-0 ">Related Products</h2>
           <hr className="h-px my-8 bg-gray border-0 dark:bg-gray" />
           <div className="grid grid-cols-2 m-5 gap-1 md:grid-cols-4 sm:grid-cols-2">
@@ -55,7 +56,7 @@ const product = () => {
               );
             })}
           </div>
-        </section>
+        </section> */}
       </div>
 
       {/* you may also like section*/}
@@ -65,7 +66,7 @@ const product = () => {
           You May Also Like
         </h4>
         {/* <hr className="h-px my-0 bg-gray border-0 dark:bg-gray" /> */}
-        <div className="grid grid-cols-2 m-5 gap-1 md:grid-cols-1">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-1">
           {product.map((item, index) => {
             if (index < 4) {
               return (
@@ -85,6 +86,7 @@ const product = () => {
           })}
         </div>
       </aside>
+      <ProductButton />
     </div>
   );
 };
