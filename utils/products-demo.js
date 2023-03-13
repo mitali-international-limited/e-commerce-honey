@@ -1,8 +1,7 @@
 const people = [
   {
     id: 1,
-    image: "/Products/Black Bull/Black Bull(1).jpeg",
-
+    image: "/images/Product/pro-1.png",
     name: "Blue Bull Honey 22g Pouches",
     category: "Male enhancement Supplement",
     quote: "Don't Quit ... ",
