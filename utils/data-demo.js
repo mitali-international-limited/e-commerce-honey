@@ -27,6 +27,27 @@ const people = [
     title: "The Ultimate Energy Enhancement",
     quote: "Max Stamina and Max Energy",
   },
+  {
+    id: 5,
+    image: "/images/banner/banner-5.jpeg",
+    name: "100K Gold Front Side",
+    title: "The Ultimate Energy Enhancement",
+    quote: "Max Stamina and Max Energy",
+  },
+  {
+    id: 6,
+    image: "/images/banner/banner-6.jpeg",
+    name: "100K Gold Front Side",
+    title: "The Ultimate Energy Enhancement",
+    quote: "Max Stamina and Max Energy",
+  },
+  {
+    id: 7,
+    image: "/images/banner/banner-7.jpeg",
+    name: "100K Gold Front Side",
+    title: "The Ultimate Energy Enhancement",
+    quote: "Max Stamina and Max Energy",
+  },
 ];
 
 export default people;
