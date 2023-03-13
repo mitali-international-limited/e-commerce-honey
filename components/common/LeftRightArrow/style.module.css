@@ -1,0 +1,27 @@
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: whitesmoke;
+  color: black;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.prev:hover,
+.next:hover {
+  @apply bg-primary;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}

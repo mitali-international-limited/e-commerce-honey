@@ -93,10 +93,6 @@ const Card = (props) => {
                 <span>48 Box Per Carton</span>
               </p>
 
-              <p>
-                <strong className="text-lg">MOG: </strong>
-                <span className=" text-primary-red">96 Box</span>
-              </p>
               <p className="flex space-x-8">
                 <strong>Price: </strong>
                 <strong className=" font-bold text-xl">7$</strong>

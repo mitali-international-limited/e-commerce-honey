@@ -29,7 +29,7 @@ const product = () => {
   return (
     <div className="relative grid  top-36 md:top-48 md:pt-8 grid_cols_5">
       <div
-        className="mx-4 md:border-r border-gray dark:border-b-gray"
+        className="md:border-r border-gray dark:border-b-gray"
         id="mainElement"
       >
         <ProductCatalog />
@@ -86,7 +86,6 @@ const product = () => {
           })}
         </div>
       </aside>
-      <ProductButton />
     </div>
   );
 };

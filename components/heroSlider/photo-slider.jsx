@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 import Button from "../Button";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
+import LeftRightArrow from "../common/LeftRightArrow";
 
 import styles from "./slider.module.css";
 
@@ -28,7 +28,7 @@ const PhotoSlider = ({ data, delayTime }) => {
   }, [index]);
 
   return (
-    <div className={`${styles.slider}`}>
+    <div>
       {people.map((person, personIndex) => {
         const { id, image, name, title, quote } = person;
         let position = "nextSlide";
@@ -59,12 +59,7 @@ const PhotoSlider = ({ data, delayTime }) => {
           </article>
         );
       })}
-      <button className={styles.prev} onClick={() => setIndex(index - 1)}>
-        <FiChevronLeft />
-      </button>
-      <button className={styles.next} onClick={() => setIndex(index + 1)}>
-        <FiChevronRight />
-      </button>
+      <LeftRightArrow setIndex={setIndex} index={index} />
     </div>
   );
 };
