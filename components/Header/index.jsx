@@ -43,11 +43,6 @@ const Header = () => {
     // Do something with the search term (e.g., perform a search)
   };
 
-  const openFavoriteModal = (event) => {
-    event.preventDefault();
-    dispatch(favToggle());
-  };
-
   const openSearchBar = (event) => {
     event.preventDefault();
     setSearchTerm(!searchTerm);
@@ -104,12 +99,12 @@ const Header = () => {
                       <span className={styles.cart_count}>5</span>
                     </div>
                   </div>
-                  {/* <CartNav/> */}
                 </div>
 
                 <div className="text-4xl text-secondary hidden md:block">
                   <MdFavorite />
                 </div>
+
                 <div className="md:hidden text-xl text-secondary">
                   <p>0.00$</p>
                 </div>

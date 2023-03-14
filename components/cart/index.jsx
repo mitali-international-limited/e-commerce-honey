@@ -1,10 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  AiOutlineCloseCircle,
-  AiOutlineMinus,
-  AiOutlinePlus,
-} from "react-icons/ai";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 import { cartToggle } from "../../Store/slices/globalSlice";
 import CheckOut from "./checkOut";
@@ -47,7 +43,11 @@ const CartNav = ({ headingLine, view, goto }) => {
               href={"../../cart/cart"}
               class="text-black bg-gray border-0 py-2 px-6 focus:outline-none hover:bg-honey rounded text-2xl text-center"
             >
+
+              View Cart
+
               {view}
+
             </Link>
           </div>
 
