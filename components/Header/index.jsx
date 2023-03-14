@@ -3,10 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggle, favToggle, cartToggle, allDepartmentToggle } from "../../Store/slices/globalSlice";
+import {
+  toggle,
+  favToggle,
+  cartToggle,
+  allDepartmentToggle,
+} from "../../Store/slices/globalSlice";
 
 import styles from "./style.module.css";
-import logo from "../../Assets/logo 1.png";
+import logo from "../../Assets/honeyhut logo.png";
 import Sidebar from "../Sidebar";
 import CategoryNav from "../category-nav";
 import AllDepartNav from "../all-department-nav";
@@ -72,8 +77,12 @@ const Header = () => {
         >
           <div className="flex  justify-between h-full w-full items-center flex-wrap py-3">
             {/**logo */}
-            <div className={`${styles.logo_box}`}>
-              <Image src={logo} cover />
+            <div
+              className={`${styles.logo_box} flex justify-center items-center`}
+            >
+              <a href="/">
+                <Image src={logo} cover />
+              </a>
             </div>
             {/**cart */}
             <div className=" md:order-4 md:mr-3 relative">
@@ -217,6 +226,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+        ``
         {searchTerm && (
           <form className="md:hidden bg-primary h-16 w-full top-36 md:top-48 left-0 absolute">
             <input
@@ -238,11 +248,15 @@ const Header = () => {
       >
         <CategoryNav />
       </div>
-      
+
       {/**Header dropdown end */}
       <Sidebar />
       <AllDepartNav />
-      <CartNav />
+      <CartNav
+        headingLine={`Shopping Cart`}
+        view={`View Cart`}
+        goto={`Goto Checkout`}
+      />
     </div>
   );
 };

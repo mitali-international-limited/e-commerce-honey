@@ -12,7 +12,7 @@ import Link from "next/link";
 
 // import styles from "./category-nav.module.css";
 
-const CartNav = () => {
+const CartNav = ({ headingLine, view, goto }) => {
   const { isCartOpen } = useSelector((state) => state.sidebar);
   const dispatch = useDispatch();
   const closeCart = () => {
@@ -32,28 +32,30 @@ const CartNav = () => {
             </div>
             <div>
               <p className="text-3xl text-center mt-16 text-secondary ">
-                Shopping Cart
+                {headingLine}
               </p>
               <hr className="h-px my-4 bg-secondary border-0 dark:bg-secondary" />
             </div>
 
             <div className="relative left-2 h-96 w-full ">
-            <CheckOut/>              
+              <CheckOut />
             </div>
           </div>
 
           <div className=" bottom-24  cursor-pointer absolute place-items-center">
-            <Link href={"../../cart/cart"} class="text-black bg-gray border-0 py-2 px-6 focus:outline-none hover:bg-honey rounded text-2xl text-center">
-              View Cart
+            <Link
+              href={"../../cart/cart"}
+              class="text-black bg-gray border-0 py-2 px-6 focus:outline-none hover:bg-honey rounded text-2xl text-center"
+            >
+              {view}
             </Link>
           </div>
 
           <div className=" bottom-10  cursor-pointer absolute place-items-center">
             <button class="text-black bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-honey rounded text-2xl text-center">
-              Go to Checkout
+              {goto}
             </button>
           </div>
-
         </div>
       )}
     </div>

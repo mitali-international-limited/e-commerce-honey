@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Hot from "./hotProduct";
-import categoryData from "../../../utils/newArrivals-demo-data"
+import categoryData from "../../../utils/newArrivals-demo-data";
 
 const NewSection = () => {
   const [category, setCategory] = useState(categoryData);

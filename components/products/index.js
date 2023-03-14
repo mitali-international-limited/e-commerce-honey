@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 
@@ -48,16 +49,18 @@ const Products = () => {
       >
         {product.map((item, index) => {
           return (
-            <Card
-              key={index}
-              name={item.name}
-              image={item.image}
-              category={item.category}
-              quote={item.quote}
-              quantity={item.quantity}
-              price={item.price}
-              percentage={`20%`}
-            />
+            <Link href={`/product/${product.id}`}>
+              <Card
+                key={index}
+                name={item.name}
+                image={item.image}
+                category={item.category}
+                quote={item.quote}
+                quantity={item.quantity}
+                price={item.price}
+                percentage={`20%`}
+              />
+            </Link>
           );
         })}
       </div>

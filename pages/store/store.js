@@ -20,27 +20,9 @@ import WomenProducts from "./womenProduct/index";
 
 import Image from "next/image";
 
-const Slider = () => {
+const Store = () => {
   const [people, setPeople] = useState(data);
   const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const lastIndex = data.length - 1;
-    if (index < 0) {
-      setIndex(lastIndex);
-    }
-    if (index > lastIndex) {
-      setIndex(0);
-    }
-  }, [index, data]);
-
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 3000);
-    return () => clearInterval(slider);
-  }, [index]);
-
   return (
     <div className="">
       <section
@@ -112,4 +94,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Store;

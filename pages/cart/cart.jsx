@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Head from "next/head";
 import styles from "./Cart.module.css";
 import { MdClose } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
@@ -44,23 +43,17 @@ const tableData = [
   },
 ];
 
-const calculateTotalCost = () => {
-  let totalCost = 0;
-  tableData.forEach((item) => {
-    totalCost += item.total;
-  });
-  return totalCost;
-};
-
 export default function Cart() {
   const [data, setData] = useState(tableData);
-
+  const calculateTotalCost = () => {
+    let totalCost = 0;
+    tableData.forEach((item) => {
+      totalCost += item.total;
+    });
+    return totalCost;
+  };
   return (
     <div className="relative top-36 md:top-48">
-      <Head>
-        <title>Shopping Cart</title>
-      </Head>
-
       <div className={styles.container}>
         <h1 className="text-center font-bold">Shopping Cart</h1>
 
@@ -76,10 +69,13 @@ export default function Cart() {
           </thead>
           <tbody>
             {data.map((item) => (
-              <tr key={item.id} className="border border-l-0 border-r-0 border-gray">
+              <tr
+                key={item.id}
+                className="border border-l-0 border-r-0 border-gray"
+              >
                 <td className="py-5 px-2 text-center flex justify-center items-center text-gray">
                   <span className="mx-4 font-bold cursor-pointer hover:text-primary-red">
-                    <MdClose/>
+                    <MdClose />
                   </span>
                   {item.close}
                 </td>
@@ -87,7 +83,9 @@ export default function Cart() {
                   <img className="w-full h-full bg-center" src={item.image} />
                 </td>
                 <td className="py-5 px-2 text-center">{item.product}</td>
-                <td className="py-5 px-2 text-center">${item.price.toFixed(2)}</td>
+                <td className="py-5 px-2 text-center">
+                  ${item.price.toFixed(2)}
+                </td>
                 <td className="py-5 px-2 text-center flex justify-center items-center">
                   <span className="mx-4 font-bold cursor-pointer hover:bg-honey border border-gray">
                     <AiOutlineMinus />

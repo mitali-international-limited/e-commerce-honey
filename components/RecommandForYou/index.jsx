@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Gallery from "../gallery";
 import Card from "../Card";
 
@@ -14,13 +14,20 @@ import Photo6 from "../../public/Products/Leoard Honey/Leopard Honey(3).jpg";
 import Photo7 from "../../public/Products/G3A/_G3A5134 (2).jpg";
 import Photo8 from "../../public/Products/Extumax Honey/Etumax Honey(5).jpeg";
 
-const RecommendProduct = () => {
-  const [product, setProduct] = useState(productData);
+const RecommendProduct = ({ top, className }) => {
   return (
-    <section className="padding_inside relative top-36 md:top-48">
+    <section
+      className={`padding_inside relative ${
+        top ? `top-${top}` : `top-36 md:top-48 `
+      }`}
+    >
       <h2 className="mb-0 ">JUST FOR YOU</h2>
       <hr className="h-px my-8 bg-gray border-0 dark:bg-gray" />
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div
+        className={`${
+          className ? `${className}` : `grid grid-cols-2 md:grid-cols-4 gap-5`
+        } `}
+      >
         <CommonCard image={Photo1} percentage={"Hot"} />
         <CommonCard image={Photo2} percentage={"Hot"} />
         <CommonCard image={Photo3} percentage={"Hot"} />
