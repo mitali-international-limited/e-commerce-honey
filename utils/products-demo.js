@@ -182,3 +182,7 @@ const people = [
 ];
 
 export default people;
+
+export const getProductById = (id) => {
+  return people.find((person) => person.id === Number(id));
+};

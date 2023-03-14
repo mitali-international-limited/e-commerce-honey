@@ -12,31 +12,11 @@ const Card = (props) => {
   const { id, name, image, cardType, quote, quantity, price, percentage } =
     props;
 
-  const handleAnimation = (e) => {
-    const divElement = document.querySelectorAll(`.${styles.card}`);
-    // const imageElement = divElement.querySelector("img");
-
-    // if (e.type === "mouseenter") {
-    //   // code to execute when mouse enters
-    //   imageElement.classList.add("hover-scale-delay");
-    //   imageElement.classList.add("hover-scale");
-    //   console.log(imageElement.classList);
-    // } else if (e.type === "mouseleave") {
-    //   imageElement.classList.remove("hover-scale-delay");
-    //   imageElement.classList.remove("hover-scale");
-    // } else if (e.type === "transitionend") {
-    //   // code to execute when transition ends
-    //   imageElement.classList.remove("hover-scale-delay");
-    // }
-  };
-
   return (
     <>
       {cardType === "category" ? (
         <div
           className={`${styles.card} my-2 cursor-pointer transition-all duration-300 shadow-hnx  hover:scale-105 bg-white`}
-          onMouseEnter={handleAnimation}
-          onMouseLeave={handleAnimation}
         >
           <div className="relative w-full h-3/4 transition-all duration-500 hover:scale-110 rounded-md hover:skew-x-2 overflow-hidden">
             <Image src={image} alt={name} fill cover />
@@ -50,10 +30,10 @@ const Card = (props) => {
         <div
           className={`${styles.productCard} shadow-hnx hover:scale-105 transition-all duration-300 bg-white`}
         >
-          <div className="rounded  cursor-pointer w-full h-full">
-            <div className="w-full h-56 flex flex-col relative">
+          <div className="rounded  cursor-pointer w-64 h-full">
+            <div className="w-full h-52 flex flex-col relative">
               <div className="relative w-full h-full transition-all duration-500 hover:scale-110 rounded-md hover:skew-x-2 overflow-hidden">
-                <Image src={image} alt={name} fill cover />
+                <Image src={image} alt={name} fill contain />
               </div>
               <div
                 className={`absolute w-full h-16  z-50 bottom-0 left-0  flex items-center gap-2 p-5`}
@@ -62,9 +42,6 @@ const Card = (props) => {
                   <span className="w-full h-full flex items-center bg-primary justify-center text-3xl text-black rounded-full ">
                     <MdOutlineFavoriteBorder />
                   </span>
-                </div>
-                <div className="hidden">
-                  <ReviewStar className={`text-black flex`} />
                 </div>
               </div>
             </div>
