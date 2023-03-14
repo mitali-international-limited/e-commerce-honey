@@ -90,15 +90,6 @@ const people = [
     price: "$120",
   },
   {
-    id: 11,
-    image: "/images/Product/pro-11.png",
-    name: "Royal Honey VIP 20g Sachet",
-    category: "Dietary Supplement",
-    quote: "Discover the potential",
-    quantity: "10 pcs",
-    price: "$120",
-  },
-  {
     id: 12,
     image: "/images/Product/pro-12.png",
     name: "Royal Honey VIP 20g Sachet",
